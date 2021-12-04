@@ -7,7 +7,7 @@ class env:
     def __init__(self,
                  image_list:list = None,
                  image_size:int = 20,
-                 prob_cutout:int = 0,
+                 prob_cutout:int = 0.5,
                  num_images:int = 5,
                  start_position:tuple = None,
                  start_direction:tuple = None,
@@ -136,15 +136,23 @@ class env:
             done = True
             reward = -self.time
             
-        return self.current_image, reward, done
+        return deepcopy(self.current_image), reward, done
                 
-    def render(self):
-        image = (deepcopy(self.current_image) + 1)/2
-        image[self.current_position[1]][self.current_position[0]] = 0.3
-        render_img = cv2.resize(image, dsize=(400, 400), interpolation=cv2.INTER_AREA)
-        cv2.imshow('Molding...', render_img)
-        if cv2.waitKey(25)==ord('q'):
-            cv2.destroyAllWindows()
+    def render(self, on_terminal=False, add_comment = ''):
+        if on_terminal:
+            print('==='*len(self.current_image))
+            for row in self.current_image:
+                print(' '.join([f'{int(n):2d}' for n in row]))
+            print('==='*len(self.current_image))
+            print(add_comment)
+        
+        else:
+            image = (deepcopy(self.current_image) + 1)/2
+            image[self.current_position[1]][self.current_position[0]] = 0.3
+            render_img = cv2.resize(image, dsize=(400, 400), interpolation=cv2.INTER_AREA)
+            cv2.imshow('Molding...', render_img)
+            if cv2.waitKey(25)==ord('q'):
+                cv2.destroyAllWindows()
 
 import time
 if __name__=="__main__":
@@ -153,9 +161,13 @@ if __name__=="__main__":
     max_step = 100000
     step = 0
     while step < max_step:
-        env.render()
+        step += 1
+        # env.render()
         action = np.random.randint(7)
-        _,_,done = env.step(action)
-        if done:
+        state,_,done = env.step(action)
+
+        if step > 10:
             break
+        if done:
+            env.reset()
     
