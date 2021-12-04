@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 from data.main import *
 from copy import deepcopy
+import os
 
 class env:
     def __init__(self,
@@ -140,11 +141,17 @@ class env:
                 
     def render(self, on_terminal=False, add_comment = ''):
         if on_terminal:
-            print('==='*len(self.current_image))
-            for row in self.current_image:
-                print(' '.join([f'{int(n):2d}' for n in row]))
-            print('==='*len(self.current_image))
-            print(add_comment)
+            image = deepcopy(self.current_image)
+            image[self.current_position[1]][self.current_position[0]] = 2
+            print_on_terminal = ''
+            print_on_terminal += '==='*len(image)+'\n'
+            for row in image:
+                print_on_terminal += ' '.join([f'{int(n):2}' if n!=2 else 'MM' for n in row])+'\n'
+            print_on_terminal += '==='*len(image)+'\n'
+            print_on_terminal += add_comment
+            with open(f'./render/render.log', 'w') as f:
+                f.write(print_on_terminal)
+            time.sleep(0.03)
         
         else:
             image = (deepcopy(self.current_image) + 1)/2
@@ -162,12 +169,9 @@ if __name__=="__main__":
     step = 0
     while step < max_step:
         step += 1
-        # env.render()
+        env.render(on_terminal=True)
         action = np.random.randint(7)
-        state,_,done = env.step(action)
-
-        if step > 10:
-            break
+        _,_,done = env.step(action)
         if done:
             env.reset()
     
