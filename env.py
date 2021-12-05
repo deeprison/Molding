@@ -1,10 +1,11 @@
 import numpy as np
+from numpy.lib.utils import info
 import cv2
 from data.main import *
 from copy import deepcopy
 import os
 
-class env:
+class Env:
     def __init__(self,
                  image_list:list = None,
                  image_size:int = 20,
@@ -62,9 +63,13 @@ class env:
 
         self.current_direction = self.start_direction
         self.time = 0
+        self.total_step = 0
         
-        self.fill_up_done = -(self.image_size**2) + 2*np.sum(self.current_image)
-        self.time_end_done = (self.image_size**2)*2
+        # self.fill_up_done = -(self.image_size**2) + 2*np.sum(self.current_image)
+        self.time_end_done = (self.image_size**2)
+
+        # For savinga additional information
+        self.info = None
     
     def generate_images(self, img_size, prob_cutout, num_images):
         image_list = []
@@ -77,9 +82,13 @@ class env:
         self.current_image = self.image_list[image_index]
         self.image_size = self.current_image.shape[0]
         self.current_position = list(self.start_position)
-        self.current_image[self.current_position[1]][self.current_position[0]] = -1
+        x, y = self.current_position
+        state = deepcopy(self.current_image)
+        state[y][x] = 2
+        self.fill_up_done = len(self.current_image[self.current_image==0])
+        self.previous_value = 0
         self.time = 0
-        return self.current_image
+        return state
         
     def change_direction(self, action):
         '''
@@ -107,10 +116,7 @@ class env:
     
     def generate_transformation_matrix(self, degree):
         degree *= (np.pi / 180.)
-        if degree == 90 or degree == -90:
-            return np.array([[np.cos(degree), np.sin(degree)],[-np.sin(degree), np.cos(degree)]])
-        else:
-            return np.array([[np.cos(degree), np.sin(degree)],[-np.sin(degree), np.cos(degree)]])
+        return np.array([[np.cos(degree), np.sin(degree)],[-np.sin(degree), np.cos(degree)]])
             
     def step(self, action):
         # change direction
@@ -118,6 +124,8 @@ class env:
         
         # move
         self.old_position = deepcopy(self.current_position)
+        
+        # move
         self.current_position[0] += self.current_direction[0]
         self.current_position[1] += self.current_direction[1]
         if (0<=self.current_position[0]<self.image_size) and (0<=self.current_position[1]<self.image_size): # not move at the edges
@@ -126,18 +134,25 @@ class env:
                 self.time += 0.5
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
-                self.time += 1
+                # self.time += 1
+                self.time -= 1
         else:
             self.current_position = self.old_position
             self.time += 1
         
+        x, y = self.current_position
+        state = deepcopy(self.current_image)
+        state[y][x] = 2
+        
+        self.total_step += 1
         done = False
         reward = 0
-        if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
+        # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
+        if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==0]) == self.fill_up_done:
             done = True
             reward = -self.time
-            
-        return deepcopy(self.current_image), reward, done
+        
+        return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
                 
     def render(self, on_terminal=False, add_comment = ''):
         if on_terminal:
@@ -163,15 +178,21 @@ class env:
 
 import time
 if __name__=="__main__":
-    env = env()
+    env = Env()
     obs = env.reset()
     max_step = 100000
     step = 0
     while step < max_step:
         step += 1
-        env.render(on_terminal=True)
+        env.render()
         action = np.random.randint(7)
-        _,_,done = env.step(action)
+        state,_,done,_ = env.step(action)
+        
+        if step > 10:
+            for row in state:
+                print(''.join([f'{n:3}' for n in row]))
+            break
+        
         if done:
             env.reset()
     
