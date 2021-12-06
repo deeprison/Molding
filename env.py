@@ -88,7 +88,7 @@ class Env:
         self.fill_up_done = len(self.current_image[self.current_image==0])
         self.previous_value = 0
         self.time = 0
-        return state
+        return (state+1)*50
         
     def change_direction(self, action):
         '''
