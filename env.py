@@ -88,6 +88,7 @@ class Env:
         self.fill_up_done = len(self.current_image[self.current_image==0])
         self.previous_value = 0
         self.time = 0
+        self.total_step = 0
         return (state+1)*50
         
     def change_direction(self, action):
@@ -148,9 +149,10 @@ class Env:
         done = False
         reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
-        if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==0]) == self.fill_up_done:
+        if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==1]) == self.fill_up_done:
             done = True
             reward = -self.time
+            time.sleep(10)
         
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
                 
@@ -188,10 +190,10 @@ if __name__=="__main__":
         action = np.random.randint(7)
         state,_,done,_ = env.step(action)
         
-        if step > 10:
-            for row in state:
-                print(''.join([f'{n:3}' for n in row]))
-            break
+        # if step > 10:
+        #     for row in state:
+        #         print(''.join([f'{n:3}' for n in row]))
+        #     break
         
         if done:
             env.reset()
