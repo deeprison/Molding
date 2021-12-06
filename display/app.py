@@ -1,6 +1,4 @@
-import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
 from constant import *
 from utils import get_data
 
