@@ -11,11 +11,14 @@ DEFAULT_SQUARE.extend([[0 for _ in range(20)] for _ in range(3)])
 DEFAULT_SQUARE = np.array(DEFAULT_SQUARE, dtype="float32")
 
 
-def square_gen(size=20, prob_cutout=0):
-    image = cv2.resize(DEFAULT_SQUARE, (size, size), interpolation=cv2.INTER_LINEAR)
+def square_gen(size=20, prob_cutout=0, n_holes=2, ctm=None):
+    if ctm is None:
+        image = cv2.resize(DEFAULT_SQUARE, (size, size), interpolation=cv2.INTER_LINEAR)
+    else:
+        image = ctm
 
     transformed = A.Compose([
-        A.Cutout(p=prob_cutout, num_holes=2, max_h_size=size//4, max_w_size=size//4)
+        A.Cutout(p=prob_cutout, num_holes=n_holes, max_h_size=size // 4, max_w_size=size // 4)
     ])(image=image)
     image = transformed["image"]
 
