@@ -3,6 +3,7 @@ from numpy.lib.utils import info
 import cv2
 from data.main import *
 from copy import deepcopy
+import matplotlib.pyplot as plt
 import os
 
 class Env:
@@ -68,8 +69,9 @@ class Env:
         # self.fill_up_done = -(self.image_size**2) + 2*np.sum(self.current_image)
         self.time_end_done = (self.image_size**2)
 
-        # For savinga additional information
+        # For saving additional information
         self.info = None
+        self.trajectory = []
     
     def generate_images(self, img_size, prob_cutout, num_images):
         image_list = []
@@ -78,16 +80,26 @@ class Env:
         return image_list
     
     def reset(self):
+        # 이미지 초기화
         image_index = np.random.randint(len(self.image_list))
+        self.orig_image = deepcopy(self.image_list[image_index])
         self.current_image = deepcopy(self.image_list[image_index])
         self.image_size = self.current_image.shape[0]
+
+        # Done 기준 초기화
+        self.fill_up_done = np.sum(self.current_image==0)
+
+        # Agent 위치 초기화
         self.current_position = list(self.start_position)
         self.current_direction = deepcopy(self.start_direction)
+        self.trajectory = []
         x, y = self.current_position
         state = deepcopy(self.current_image)
         state[y][x] = 2
+        self.trajectory.append(deepcopy(self.current_position))
         self.current_image[y][x] = -1
-        self.fill_up_done = np.sum(self.current_image==0)
+
+        # 기타 정보 초기화
         self.previous_value = 0
         self.time = 0
         self.total_step = 0
@@ -128,6 +140,7 @@ class Env:
         # move
         self.old_position = deepcopy(self.current_position)
         
+        reward = 0
         # move
         self.current_position[0] += self.current_direction[0]
         self.current_position[1] += self.current_direction[1]
@@ -135,26 +148,29 @@ class Env:
             x, y = self.current_position
             if self.current_image[y][x] in [-1, 1]:
                 self.time += 0.5
+                reward = -0.1
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
                 # self.time += 1
                 self.time -= 1
+                reward = 1
         else:
             self.current_position = self.old_position
             self.time += 1
         
+        self.trajectory.append(deepcopy(self.current_position))
         x, y = self.current_position
         state = deepcopy(self.current_image)
         state[y][x] = 2
         
         self.total_step += 1
         done = False
-        reward = 0
+        # reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
-        # if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==1]) == self.fill_up_done:
+        # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
         if np.sum(self.current_image==-1) == self.fill_up_done:
             done = True
-            reward = -self.time
+            # reward = -self.time
         
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
                 
@@ -179,6 +195,19 @@ class Env:
             cv2.imshow('Molding...', render_img)
             if cv2.waitKey(25)==ord('q'):
                 cv2.destroyAllWindows()
+    
+    def draw_trajectory(self,score):
+        image = (deepcopy(self.orig_image) + 1)/2
+        plt.imshow(image)
+        xs = []
+        ys = []
+        for pos in self.trajectory:
+            xs.append(pos[0])
+            ys.append(pos[1])
+        plt.plot(xs, ys)
+        plt.title(f'trajectory, {score}')
+        plt.savefig('./trajectory.png')
+        plt.close()
 
 import time
 if __name__=="__main__":
