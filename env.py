@@ -61,7 +61,7 @@ class Env:
                 direction_index = np.random.choice([0, 6],1)
             self.start_direction = self.all_directions[direction_index[0]]
 
-        self.current_direction = self.start_direction
+        self.current_direction = deepcopy(self.start_direction)
         self.time = 0
         self.total_step = 0
         
@@ -82,9 +82,11 @@ class Env:
         self.current_image = deepcopy(self.image_list[image_index])
         self.image_size = self.current_image.shape[0]
         self.current_position = list(self.start_position)
+        self.current_direction = deepcopy(self.start_direction)
         x, y = self.current_position
         state = deepcopy(self.current_image)
         state[y][x] = 2
+        self.current_image[y][x] = -1
         self.fill_up_done = len(self.current_image[self.current_image==0])
         self.previous_value = 0
         self.time = 0
