@@ -87,7 +87,7 @@ class Env:
         state = deepcopy(self.current_image)
         state[y][x] = 2
         self.current_image[y][x] = -1
-        self.fill_up_done = len(self.current_image[self.current_image==0])
+        self.fill_up_done = np.sum(self.current_image==0)
         self.previous_value = 0
         self.time = 0
         self.total_step = 0
@@ -151,7 +151,8 @@ class Env:
         done = False
         reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
-        if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==1]) == self.fill_up_done:
+        # if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==1]) == self.fill_up_done:
+        if np.sum(self.current_image==-1) == self.fill_up_done:
             done = True
             reward = -self.time
         
