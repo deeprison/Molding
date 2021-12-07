@@ -79,7 +79,7 @@ class Env:
     
     def reset(self):
         image_index = np.random.randint(len(self.image_list))
-        self.current_image = self.image_list[image_index]
+        self.current_image = deepcopy(self.image_list[image_index])
         self.image_size = self.current_image.shape[0]
         self.current_position = list(self.start_position)
         x, y = self.current_position
@@ -152,7 +152,6 @@ class Env:
         if self.total_step >= self.time_end_done or len(self.current_image[self.current_image==1]) == self.fill_up_done:
             done = True
             reward = -self.time
-            time.sleep(10)
         
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
                 
