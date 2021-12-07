@@ -1,13 +1,14 @@
+import time
 import streamlit as st
 from constant import *
-from utils import get_data
+from utils import get_data_info, visualize
 
 
 st.set_page_config(
-    layout="wide",
+    layout="centered", # wide
     initial_sidebar_state="auto",
     page_title="Molder",
-    page_icon="💎"
+    page_icon="💎",
 )
 
 st.markdown(
@@ -37,23 +38,11 @@ with st.sidebar:
     """
 
     st.write("#")
-    data, diff, size = get_data()
+    data, diff, size = get_data_info()
 
 
-for _ in range(6):
+for _ in range(1):
     st.write("#")
 
 
-c1, c2, c3, c4 = st.columns(4)
-with c1: # original
-    st.write("## Data")
-    st.image(f"./data/{data}/png/{diff.lower()}_{size}.png", width=300)
-with c2: # horizontal 
-    st.write("## Horizontal")
-    st.image(f"./data/{data}/png/{diff.lower()}_{size}.png", width=300)
-with c3: # vertical
-    st.write("## Vertical")
-    st.image(f"./data/{data}/png/{diff.lower()}_{size}.png", width=300)
-with c4: # trained
-    st.write("## Train")
-    st.image(f"./data/{data}/png/{diff.lower()}_{size}.png", width=300)
+visualize(data, diff, size, 200)

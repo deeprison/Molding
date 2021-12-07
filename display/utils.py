@@ -1,11 +1,8 @@
-import os
-import imageio
 import streamlit as st
-import matplotlib.pyplot as plt
 from constant import *
 
 
-def get_data():
+def get_data_info():
     sltd = st.radio(
         "구분", options=["Basic", "Alpabet"]
     )
@@ -29,53 +26,18 @@ def get_data():
     return data, difficulty, size
 
 
-# def show_image(data, diff, size):
-#     fig_path = f"./data/{data}/npy/{diff.lower()}_{size}.npy"
-#     image = np.load(fig_path)
-#     # st.image(image, width=300)
+def visualize(data, diff, size, width=200):
+    st.write("## Data")
+    st.image(f"./data/{data}/png/{diff.lower()}_{size}.png", width=width)
+    st.write("#")
 
-#     fig, ax = plt.subplots(figsize=(3, 3))
-#     ax.imshow(image, plt.cm.gray)
-#     ax.axis("off")
-#     st.pyplot(fig)
-
-
-def save_cont_imgs(img, mode="horizontal", save_path="./"):
-    assert mode in ["horizontal", "vertical"]
-    assert img.shape[0] == img.shape[1]
-
-    fig_num = 0
-    for i in range(img.shape[0]):
-        n = 0 if i % 2 == 0 else img.shape[0]-1
-        while (n >= 0) and (n < img.shape[0]):
-            step = 1 if i % 2 == 0 else -1
-            if mode == "horizontal":
-                if img[i, n] == 0:
-                    img[i, n] = .5
-                else:
-                    img[i, n] = .9
-            else:
-                if img[n, i] == 0:
-                    img[n, i] = .5
-                else:
-                    img[n, i] = .9
-
-            plt.imshow(img); plt.axis("off"); plt.savefig(os.path.join(save_path, f"./f{fig_num}.png"))
-            n += step
-            fig_num += 1
-
-
-def get_gif(dir, save_path="./"):
-    images = []
-    files = os.listdir(dir)
-    files = sorted(files, key=lambda x: int(x.split(".")[0][1:]))
-    for f in files:
-        images.append(imageio.imread(os.path.join(dir, f)))
-
-    imageio.mimsave(os.path.join(save_path, "tmp.gif"), images, duration=.1)
-
-
-# save_cont_imgs(sq_10_extreme, save_path="./tmp")
-# get_gif("./tmp")
-    
-    
+    c1, c2, c3 = st.columns(3)
+    with c1: 
+        st.write("#### Baby-level")
+        st.image(BASIC_GIF[f"{diff.lower()}_{size}"], width=width)
+    with c2:
+        st.write("#### Human-level")
+        st.image(SOLUTION_GIF[f"{diff.lower()}_{size}"], width=width)
+    with c3:
+        st.write("#### Trained")
+        st.image(SOLUTION_GIF[f"{diff.lower()}_{size}"], width=width)
