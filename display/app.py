@@ -41,6 +41,10 @@ with st.sidebar:
     data, diff, size = get_data_info()
 
 
+data = data.lower()
+diff = diff.lower()
+size = size.lower()
+
 for _ in range(1):
     st.write("#")
 
