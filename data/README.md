@@ -1,12 +1,26 @@
-## Usage
-
-
-```
-from main import square_gen
-
-image = square_gen(size=30) # 30x30 size
-image = square_gen(size=30, prob_cutout=1.) # 30x30 size, applyed cutout
-```
-
-
-<img src="https://github.com/deeprison/Molding/blob/main/data/img/v4.png" width="500"/>
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/a.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/b.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/c.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/d.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/e.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/f.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/g.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/h.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/i.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/j.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/k.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/l.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/m.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/n.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/o.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/p.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/q.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/r.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/s.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/t.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/u.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/v.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/w.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/x.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/y.png" width="1000"/>  
+<img src="https://github.com/deeprison/Molding/blob/main/data/img/z.png" width="1000"/>  
