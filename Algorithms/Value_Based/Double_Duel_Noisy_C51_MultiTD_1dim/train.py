@@ -1,15 +1,8 @@
 import numpy as np
-import time    
 import gym    
 import os
 
-import matplotlib.pyplot as plt
-from IPython.display import clear_output
-
 from agent import Agent
-from replay_buffer import ReplayBuffer
-from qnetwork import QNetwork 
-
 import wandb   
 
 env_list = {
@@ -23,23 +16,23 @@ env_list = {
     7: "PongDeterministic-v4",
 }
 # env.seed(0)
-env_name = env_list[2]
+env_name = env_list[0]
 env = gym.make(env_name)
 input_dim = env.observation_space.shape[0]
 print("env_name", env_name) 
 print(env.action_space.n) 
 
-update_start_buffer_size = 5000
-tot_train_frames = 2000000
+update_start_buffer_size = 200
+tot_train_frames = 20000
 
 gamma = 0.99
-buffer_size = int(100000) 
+buffer_size = int(2000) 
 batch_size = 32           
 update_type = 'hard'
 soft_update_tau = 0.002
-learning_rate = 0.0005
+learning_rate = 0.001
 target_update_freq = 150
-current_update_freq = 4 # Update frequency of current Q-Network.  
+current_update_freq = 1 # Update frequency of current Q-Network.  
 
 device_num = 0
 rand_seed = None

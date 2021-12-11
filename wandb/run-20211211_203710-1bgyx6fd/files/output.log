@@ -1,8 +1,0 @@
-Storing initial buffer..
-Done. Start learning..
-Traceback (most recent call last):
-  File "Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/train.py", line 105, in <module>
-    agent.train()
-  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/agent.py", line 148, in train
-    reward, next_state, done = self.get_state(state, action)
-TypeError: get_state() takes 2 positional arguments but 3 were given
