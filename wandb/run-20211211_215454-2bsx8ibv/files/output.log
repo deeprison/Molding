@@ -45,3 +45,48 @@ Done. Frames saved in buffer:6000 Start learning..
 
 
           | Model saved. Recent scores: [140.20000000000545, 157.90000000000512, 151.20000000000536, 124.00000000000446, 149.80000000000476, 140.80000000000567, 122.40000000000515, 159.4000000000045, 148.80000000000564, 160.20000000000502], Training time: 0.2hrs IQSL_Projects /JungKH /Molding
+
+          | Model saved. Recent scores: [151.20000000000536, 124.00000000000446, 149.80000000000476, 140.80000000000567, 122.40000000000515, 159.4000000000045, 148.80000000000564, 160.20000000000502, 131.40000000000293, 177.20000000000462], Training time: 0.2hrs IQSL_Projects /JungKH /Molding
+
+          | Model saved. Recent scores: [149.80000000000476, 140.80000000000567, 122.40000000000515, 159.4000000000045, 148.80000000000564, 160.20000000000502, 131.40000000000293, 177.20000000000462, 131.2000000000055, 173.00000000000497], Training time: 0.2hrs IQSL_Projects /JungKH /Molding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+151.80000000000388
+Traceback (most recent call last):
+  File "Algorithms/Value_Based/Vanila_DQN/train.py", line 99, in <module>
+    agent.train()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 178, in train
+    loss = self.update_behavior_q_net()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 137, in update_behavior_q_net
+    loss.backward()
+  File "/home/iqsl/anaconda3/envs/rlgpf/lib/python3.7/site-packages/torch/tensor.py", line 245, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/iqsl/anaconda3/envs/rlgpf/lib/python3.7/site-packages/torch/autograd/__init__.py", line 147, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag
+KeyboardInterrupt

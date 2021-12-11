@@ -10,5 +10,7 @@ dqn.py
 
 /model_save
 
+/*/*/__pycache__/
 /*/*/*/__pycache__/
 /*/*/*/model_save/
+/wandb

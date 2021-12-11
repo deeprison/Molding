@@ -12,19 +12,19 @@ env_name = "Mold_ENV"
 input_dim = 84
 input_frame = 4
 
-update_start_buffer_size = 6000
+update_start_buffer_size = 8000
 num_frames = 600000
 eps_max = 1.0
 eps_min = 0.1
-eps_decay = 1/100000
+eps_decay = 1/150000
 gamma = 0.99
 
-buffer_size = int(3e4) 
+buffer_size = int(5e4) 
 batch_size = 32           
 update_type = 'hard'
 soft_update_tau = 0.002
-learning_rate = 0.001
-target_update_freq = 150
+learning_rate = 0.0001
+target_update_freq = 200
 skipped_frame = 0
 
 device_num = 0
