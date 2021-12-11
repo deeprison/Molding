@@ -1,0 +1,15 @@
+Storing initial buffer..
+Done. Start learning..
+/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/agent.py:165: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  np.save(self.model_path+'{}_history_Score_{}_{}hrs.npy'.format(frame_idx, score, training_time), np.array(history_store))
+          | Model saved. Recent scores: [52.10000000000321], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927, 136.80000000000734], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927, 136.80000000000734, 105.80000000000734], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927, 136.80000000000734, 105.80000000000734, 105.2000000000084], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927, 136.80000000000734, 105.80000000000734, 105.2000000000084, 125.50000000000384], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [52.10000000000321, 116.80000000000658, 99.40000000000927, 136.80000000000734, 105.80000000000734, 105.2000000000084, 125.50000000000384, 165.20000000000655], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+
+
+Total training time: 0.012469192147254943(hrs)

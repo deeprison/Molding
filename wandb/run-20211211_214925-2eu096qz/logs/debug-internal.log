@@ -1,0 +1,61 @@
+2021-12-11 21:49:25,664 INFO    MainThread:31058 [internal.py:wandb_internal():91] W&B internal server running at pid: 31058, started at: 2021-12-11 21:49:25.663522
+2021-12-11 21:49:25,667 DEBUG   HandlerThread:31058 [handler.py:handle_request():124] handle_request: check_version
+2021-12-11 21:49:25,667 INFO    WriterThread:31058 [datastore.py:open_for_write():80] open: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/run-2eu096qz.wandb
+2021-12-11 21:49:25,670 DEBUG   SenderThread:31058 [sender.py:send():179] send: header
+2021-12-11 21:49:25,670 DEBUG   SenderThread:31058 [sender.py:send_request():193] send_request: check_version
+2021-12-11 21:49:25,730 DEBUG   SenderThread:31058 [sender.py:send():179] send: run
+2021-12-11 21:49:25,984 INFO    SenderThread:31058 [dir_watcher.py:__init__():168] watching files in: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files
+2021-12-11 21:49:25,984 INFO    SenderThread:31058 [sender.py:_start_run_threads():719] run started: 2eu096qz with start time 1639226965
+2021-12-11 21:49:25,985 DEBUG   SenderThread:31058 [sender.py:send():179] send: summary
+2021-12-11 21:49:25,985 INFO    SenderThread:31058 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-12-11 21:49:25,988 DEBUG   HandlerThread:31058 [handler.py:handle_request():124] handle_request: run_start
+2021-12-11 21:49:26,011 DEBUG   HandlerThread:31058 [meta.py:__init__():39] meta init
+2021-12-11 21:49:26,011 DEBUG   HandlerThread:31058 [meta.py:__init__():53] meta init done
+2021-12-11 21:49:26,011 DEBUG   HandlerThread:31058 [meta.py:probe():210] probe
+2021-12-11 21:49:26,031 DEBUG   HandlerThread:31058 [meta.py:_setup_git():200] setup git
+2021-12-11 21:49:26,051 DEBUG   HandlerThread:31058 [meta.py:_setup_git():207] setup git done
+2021-12-11 21:49:26,052 DEBUG   HandlerThread:31058 [meta.py:_save_pip():57] save pip
+2021-12-11 21:49:26,053 DEBUG   HandlerThread:31058 [meta.py:_save_pip():71] save pip done
+2021-12-11 21:49:26,053 DEBUG   HandlerThread:31058 [meta.py:_save_conda():78] save conda
+2021-12-11 21:49:26,988 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/requirements.txt
+2021-12-11 21:49:26,989 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-summary.json
+2021-12-11 21:49:26,989 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/conda-environment.yaml
+2021-12-11 21:49:30,824 DEBUG   HandlerThread:31058 [meta.py:_save_conda():86] save conda done
+2021-12-11 21:49:30,825 DEBUG   HandlerThread:31058 [meta.py:probe():252] probe done
+2021-12-11 21:49:30,828 DEBUG   SenderThread:31058 [sender.py:send():179] send: files
+2021-12-11 21:49:30,829 INFO    SenderThread:31058 [sender.py:_save_file():841] saving file wandb-metadata.json with policy now
+2021-12-11 21:49:30,839 DEBUG   HandlerThread:31058 [handler.py:handle_request():124] handle_request: stop_status
+2021-12-11 21:49:30,839 DEBUG   SenderThread:31058 [sender.py:send_request():193] send_request: stop_status
+2021-12-11 21:49:30,986 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/conda-environment.yaml
+2021-12-11 21:49:30,987 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-metadata.json
+2021-12-11 21:49:30,987 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log
+2021-12-11 21:49:32,987 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log
+2021-12-11 21:49:35,481 DEBUG   SenderThread:31058 [sender.py:send():179] send: history
+2021-12-11 21:49:35,481 DEBUG   SenderThread:31058 [sender.py:send():179] send: summary
+2021-12-11 21:49:35,486 INFO    SenderThread:31058 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-12-11 21:49:35,989 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-summary.json
+2021-12-11 21:49:36,989 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log
+2021-12-11 21:49:42,679 WARNING MainThread:31058 [internal.py:wandb_internal():147] Internal process interrupt: 1
+2021-12-11 21:49:42,857 WARNING MainThread:31058 [internal.py:wandb_internal():147] Internal process interrupt: 2
+2021-12-11 21:49:42,857 ERROR   MainThread:31058 [internal.py:wandb_internal():150] Internal process interrupted.
+2021-12-11 21:49:42,992 INFO    Thread-8  :31058 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log
+2021-12-11 21:49:43,042 INFO    SenderThread:31058 [sender.py:finish():947] shutting down sender
+2021-12-11 21:49:43,042 INFO    SenderThread:31058 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-12-11 21:49:43,044 INFO    HandlerThread:31058 [handler.py:finish():658] shutting down handler
+2021-12-11 21:49:43,849 INFO    WriterThread:31058 [datastore.py:close():288] close: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/run-2eu096qz.wandb
+2021-12-11 21:49:43,993 INFO    SenderThread:31058 [dir_watcher.py:finish():312] scan: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files
+2021-12-11 21:49:43,993 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/requirements.txt requirements.txt
+2021-12-11 21:49:43,994 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-summary.json wandb-summary.json
+2021-12-11 21:49:43,994 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-metadata.json wandb-metadata.json
+2021-12-11 21:49:43,995 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/conda-environment.yaml conda-environment.yaml
+2021-12-11 21:49:44,014 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log output.log
+2021-12-11 21:49:44,014 INFO    SenderThread:31058 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/config.yaml config.yaml
+2021-12-11 21:49:44,034 INFO    SenderThread:31058 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-11 21:49:44,034 INFO    SenderThread:31058 [file_pusher.py:join():182] waiting for file pusher
+2021-12-11 21:51:41,047 INFO    Thread-11 :31058 [upload_job.py:push():137] Uploaded file /tmp/tmp74bhp08ewandb/3hqdhf3k-wandb-metadata.json
+2021-12-11 21:51:55,316 INFO    Thread-12 :31058 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/requirements.txt
+2021-12-11 21:51:55,329 INFO    Thread-15 :31058 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/output.log
+2021-12-11 21:51:55,332 INFO    Thread-16 :31058 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/config.yaml
+2021-12-11 21:51:55,369 INFO    Thread-14 :31058 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/conda-environment.yaml
+2021-12-11 21:51:55,383 INFO    Thread-13 :31058 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214925-2eu096qz/files/wandb-summary.json
+2021-12-11 21:51:55,891 INFO    MainThread:31058 [internal.py:handle_exit():78] Internal process exited

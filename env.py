@@ -168,12 +168,15 @@ class Env:
         # reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
-        if np.sum(self.current_image==-1) == self.fill_up_done:
+
+        if (self.time>=self.time_end_done) or (np.sum(self.current_image==-1)==self.fill_up_done):
             done = True
-            # reward = -self.time
-        
+
+        # if np.sum(self.current_image==-1) == self.fill_up_done:
+        #     done = True
+
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
-                
+
     def render(self, on_terminal=False, add_comment = ''):
         if on_terminal:
             image = deepcopy(self.current_image)
@@ -217,10 +220,9 @@ if __name__=="__main__":
     step = 0
     while step < max_step:
         step += 1
-        env.render()
+        env.render(on_terminal=True)
         action = np.random.randint(7)
         state,_,done,_ = env.step(action)
-        
         # if step > 10:
         #     for row in state:
         #         print(''.join([f'{n:3}' for n in row]))

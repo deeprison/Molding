@@ -1,0 +1,22 @@
+{
+    "os": "Linux-5.4.0-91-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.10",
+    "heartbeatAt": "2021-12-11T11:40:46.975511",
+    "startedAt": "2021-12-11T11:40:46.228530",
+    "docker": null,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/train.py",
+    "codePath": "Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/train.py",
+    "git": {
+        "remote": "https://github.com/deeprison/Molding.git",
+        "commit": "b0e1a706f56b46fac3874a8484d7ff4259232d26"
+    },
+    "email": "whitesands@snu.ac.kr",
+    "root": "/home/iqsl/IQSL_Projects/JungKH/Molding",
+    "host": "iqsl215-1",
+    "username": "iqsl",
+    "executable": "/home/iqsl/anaconda3/envs/rlgpf/bin/python"
+}

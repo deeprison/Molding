@@ -21,7 +21,6 @@ import wandb
 import sys
 sys.path.insert(0, "../../..")
 from env import Env
-
 env = Env()
 
 input_dim = 84

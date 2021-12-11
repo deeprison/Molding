@@ -1,0 +1,8 @@
+Storing initial buffer..
+Done. Start learning..
+Traceback (most recent call last):
+  File "Algorithms/Value_Based/Vanila_DQN/train.py", line 99, in <module>
+    agent.train()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 183, in train
+    losses.append(loss)
+NameError: name 'loss' is not defined

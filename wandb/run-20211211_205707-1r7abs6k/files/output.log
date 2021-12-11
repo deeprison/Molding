@@ -1,0 +1,80 @@
+Storing initial buffer..
+Done. Start learning..
+/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/agent.py:165: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  np.save(self.model_path+'{}_history_Score_{}_{}hrs.npy'.format(frame_idx, score, training_time), np.array(history_store))
+          | Model saved. Recent scores: [53.40000000000248], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [53.40000000000248, 115.40000000000771], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [53.40000000000248, 115.40000000000771, 135.6000000000052], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [53.40000000000248, 115.40000000000771, 135.6000000000052, 155.00000000000594], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+
+
+
+
+          | Model saved. Recent scores: [53.40000000000248, 115.40000000000771, 135.6000000000052, 155.00000000000594, 88.00000000000958, 111.60000000000858, 81.40000000000751, 117.40000000000757, 180.40000000000614], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [53.40000000000248, 115.40000000000771, 135.6000000000052, 155.00000000000594, 88.00000000000958, 111.60000000000858, 81.40000000000751, 117.40000000000757, 180.40000000000614, 174.80000000000686], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [115.40000000000771, 135.6000000000052, 155.00000000000594, 88.00000000000958, 111.60000000000858, 81.40000000000751, 117.40000000000757, 180.40000000000614, 174.80000000000686, 147.80000000000652], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [135.6000000000052, 155.00000000000594, 88.00000000000958, 111.60000000000858, 81.40000000000751, 117.40000000000757, 180.40000000000614, 174.80000000000686, 147.80000000000652, 142.60000000000653], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+
+
+
+
+          | Model saved. Recent scores: [117.40000000000757, 180.40000000000614, 174.80000000000686, 147.80000000000652, 142.60000000000653, 93.40000000000927, 88.00000000000844, 128.80000000000538, 151.90000000000506, 153.00000000000554], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+          | Model saved. Recent scores: [180.40000000000614, 174.80000000000686, 147.80000000000652, 142.60000000000653, 93.40000000000927, 88.00000000000844, 128.80000000000538, 151.90000000000506, 153.00000000000554, 123.60000000000767], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          | Model saved. Recent scores: [144.1000000000064, 172.80000000000385, 116.4000000000051, 147.70000000000655, 107.60000000000719, 151.0000000000055, 122.70000000000707, 142.70000000000437, 143.40000000000455, 139.10000000000662], Training time: 0.1hrs IQSL_Projects /JungKH /Molding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total training time: 0.1217437301741706(hrs)

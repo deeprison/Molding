@@ -40,7 +40,7 @@ class Agent:
                  model_path: ('str: Model saving path')='./',
                  trained_model_path: ('str: Trained model path')=''):
 
-        self.action_dim = env.action_space.n
+        self.action_dim = env.action_space
         self.device = torch.device(f'cuda:{device_num}' if torch.cuda.is_available() else 'cpu')
         self.model_path = model_path
         
@@ -77,7 +77,7 @@ class Agent:
     def select_action(self, state: 'Must be pre-processed in the same way as updating current Q network. See def _compute_loss'):
         
         if np.random.random() < self.epsilon:
-            return np.zeros(self.action_dim), self.env.action_space.sample()
+            return np.zeros(self.action_dim), np.random.randint(self.action_dim)
         else:
             state = torch.FloatTensor(state).to(self.device).unsqueeze(0)/255
             Qs = self.q_behave(state)
@@ -86,7 +86,7 @@ class Agent:
 
     def processing_resize_and_gray(self, frame):
 
-        frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY) 
+        # frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY) 
         frame = cv2.resize(frame, dsize=(self.input_dim, self.input_dim)).reshape(self.input_dim, self.input_dim).astype(np.uint8) # np.uint8로 바꿔주어, 저장 용량을 최소화합니다.
         return frame 
 
@@ -97,7 +97,7 @@ class Agent:
         init_state[0] = self.processing_resize_and_gray(init_frame)
         
         for i in range(1, self.input_frames): 
-            action = self.env.action_space.sample()
+            action = np.random.randint(self.action_dim)
             for j in range(self.skipped_frame):
                 state, _, _, _ = self.env.step(action) 
             state, _, _, _ = self.env.step(action) 
@@ -129,7 +129,7 @@ class Agent:
     def store(self, state, action, reward, next_state, done):
         self.memory.store(state, action, reward, next_state, done)
 
-    def update_current_q_net(self):
+    def update_behavior_q_net(self): 
         batch = self.memory.batch_load()
         loss = self._compute_loss(batch)
 
@@ -168,13 +168,14 @@ class Agent:
             state = next_state
             if done: state = self.get_init_state()
 
-        print("Done. Start learning..")
+        print(f"Done. Frames saved in buffer:{frame_idx} Start learning..")
         history_store = []
         for frame_idx in range(1, self.num_frames+1):
             Qs, action = self.select_action(state)
             reward, next_state, done = self.get_state(state, action, skipped_frame=self.skipped_frame)
             self.store(state, action, reward, next_state, done)
             history_store.append([state, Qs, action, reward, next_state, done]) 
+            loss = self.update_behavior_q_net()
 
             if self.update_type=='hard':   self.target_hard_update()
             elif self.update_type=='soft': self.target_soft_update()
@@ -196,7 +197,7 @@ class Agent:
                     epsilons.append(self.epsilon)
                     self._plot(frame_idx, scores, losses, epsilons)
                 elif self.plot_option=='wandb': 
-                    wandb.log({'Score': score, 'loss(10 frames avg)': np.mean(losses[-10:]), 'Epsilon': self.epsilon})
+                    wandb.log({'Score': score, 'loss(10 frames avg)': np.mean(losses[-10:]), 'Frames': frame_idx, 'Epsilon': self.epsilon})
                     print(score, end='\r')
                 else: 
                     print(score, end='\r')

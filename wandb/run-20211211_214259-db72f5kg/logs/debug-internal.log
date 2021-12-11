@@ -1,0 +1,144 @@
+2021-12-11 21:43:00,155 INFO    MainThread:30202 [internal.py:wandb_internal():91] W&B internal server running at pid: 30202, started at: 2021-12-11 21:43:00.155699
+2021-12-11 21:43:00,158 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: check_version
+2021-12-11 21:43:00,158 INFO    WriterThread:30202 [datastore.py:open_for_write():80] open: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/run-db72f5kg.wandb
+2021-12-11 21:43:00,161 DEBUG   SenderThread:30202 [sender.py:send():179] send: header
+2021-12-11 21:43:00,161 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: check_version
+2021-12-11 21:43:00,203 DEBUG   SenderThread:30202 [sender.py:send():179] send: run
+2021-12-11 21:43:00,467 INFO    SenderThread:30202 [dir_watcher.py:__init__():168] watching files in: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files
+2021-12-11 21:43:00,467 INFO    SenderThread:30202 [sender.py:_start_run_threads():719] run started: db72f5kg with start time 1639226579
+2021-12-11 21:43:00,468 DEBUG   SenderThread:30202 [sender.py:send():179] send: summary
+2021-12-11 21:43:00,468 INFO    SenderThread:30202 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-12-11 21:43:00,469 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: run_start
+2021-12-11 21:43:00,492 DEBUG   HandlerThread:30202 [meta.py:__init__():39] meta init
+2021-12-11 21:43:00,493 DEBUG   HandlerThread:30202 [meta.py:__init__():53] meta init done
+2021-12-11 21:43:00,493 DEBUG   HandlerThread:30202 [meta.py:probe():210] probe
+2021-12-11 21:43:00,510 DEBUG   HandlerThread:30202 [meta.py:_setup_git():200] setup git
+2021-12-11 21:43:00,528 DEBUG   HandlerThread:30202 [meta.py:_setup_git():207] setup git done
+2021-12-11 21:43:00,528 DEBUG   HandlerThread:30202 [meta.py:_save_pip():57] save pip
+2021-12-11 21:43:00,529 DEBUG   HandlerThread:30202 [meta.py:_save_pip():71] save pip done
+2021-12-11 21:43:00,529 DEBUG   HandlerThread:30202 [meta.py:_save_conda():78] save conda
+2021-12-11 21:43:01,472 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-summary.json
+2021-12-11 21:43:01,472 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/conda-environment.yaml
+2021-12-11 21:43:01,473 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/requirements.txt
+2021-12-11 21:43:05,382 DEBUG   HandlerThread:30202 [meta.py:_save_conda():86] save conda done
+2021-12-11 21:43:05,382 DEBUG   HandlerThread:30202 [meta.py:probe():252] probe done
+2021-12-11 21:43:05,387 DEBUG   SenderThread:30202 [sender.py:send():179] send: files
+2021-12-11 21:43:05,388 INFO    SenderThread:30202 [sender.py:_save_file():841] saving file wandb-metadata.json with policy now
+2021-12-11 21:43:05,394 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: stop_status
+2021-12-11 21:43:05,398 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: stop_status
+2021-12-11 21:43:05,476 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/conda-environment.yaml
+2021-12-11 21:43:05,477 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/output.log
+2021-12-11 21:43:05,477 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_created():216] file/dir created: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-metadata.json
+2021-12-11 21:43:06,040 INFO    Thread-11 :30202 [upload_job.py:push():137] Uploaded file /tmp/tmpvp26tn0jwandb/4aho9ezg-wandb-metadata.json
+2021-12-11 21:43:07,477 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/output.log
+2021-12-11 21:43:07,905 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:07,906 DEBUG   SenderThread:30202 [sender.py:send():179] send: telemetry
+2021-12-11 21:43:07,906 DEBUG   SenderThread:30202 [sender.py:send():179] send: exit
+2021-12-11 21:43:07,906 INFO    SenderThread:30202 [sender.py:send_exit():287] handling exit code: 1
+2021-12-11 21:43:07,907 INFO    SenderThread:30202 [sender.py:send_exit():295] send defer
+2021-12-11 21:43:07,907 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:07,908 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:07,908 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 0
+2021-12-11 21:43:07,909 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:07,909 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 0
+2021-12-11 21:43:07,909 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 1
+2021-12-11 21:43:07,910 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:07,910 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 1
+2021-12-11 21:43:07,917 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:07,917 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 1
+2021-12-11 21:43:07,917 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 2
+2021-12-11 21:43:07,918 DEBUG   SenderThread:30202 [sender.py:send():179] send: stats
+2021-12-11 21:43:07,918 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:07,919 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 2
+2021-12-11 21:43:07,919 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:07,919 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 2
+2021-12-11 21:43:07,919 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 3
+2021-12-11 21:43:07,920 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:07,920 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 3
+2021-12-11 21:43:07,921 DEBUG   SenderThread:30202 [sender.py:send():179] send: summary
+2021-12-11 21:43:07,921 INFO    SenderThread:30202 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-12-11 21:43:07,921 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:07,922 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 3
+2021-12-11 21:43:07,922 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 4
+2021-12-11 21:43:07,922 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:07,922 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 4
+2021-12-11 21:43:07,923 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:07,923 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 4
+2021-12-11 21:43:08,010 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,173 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 5
+2021-12-11 21:43:08,174 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:08,174 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:08,175 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 5
+2021-12-11 21:43:08,175 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:08,175 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 5
+2021-12-11 21:43:08,175 INFO    SenderThread:30202 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-12-11 21:43:08,276 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,478 INFO    Thread-8  :30202 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-summary.json
+2021-12-11 21:43:08,479 INFO    SenderThread:30202 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/output.log
+2021-12-11 21:43:08,479 INFO    SenderThread:30202 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/config.yaml
+2021-12-11 21:43:08,480 INFO    SenderThread:30202 [dir_watcher.py:finish():312] scan: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files
+2021-12-11 21:43:08,480 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/requirements.txt requirements.txt
+2021-12-11 21:43:08,480 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-summary.json wandb-summary.json
+2021-12-11 21:43:08,481 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-metadata.json wandb-metadata.json
+2021-12-11 21:43:08,481 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/conda-environment.yaml conda-environment.yaml
+2021-12-11 21:43:08,499 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/output.log output.log
+2021-12-11 21:43:08,500 INFO    SenderThread:30202 [dir_watcher.py:finish():318] scan save: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/config.yaml config.yaml
+2021-12-11 21:43:08,508 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 6
+2021-12-11 21:43:08,510 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:08,528 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:08,528 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 6
+2021-12-11 21:43:08,529 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:08,529 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 6
+2021-12-11 21:43:08,530 INFO    SenderThread:30202 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-11 21:43:08,620 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,621 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:08,723 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,724 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:08,832 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,832 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:08,934 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:08,935 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,037 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,037 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,120 INFO    Thread-12 :30202 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/requirements.txt
+2021-12-11 21:43:09,128 INFO    Thread-15 :30202 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/output.log
+2021-12-11 21:43:09,139 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,140 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,147 INFO    Thread-14 :30202 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/conda-environment.yaml
+2021-12-11 21:43:09,160 INFO    Thread-13 :30202 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/wandb-summary.json
+2021-12-11 21:43:09,168 INFO    Thread-16 :30202 [upload_job.py:push():137] Uploaded file /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/files/config.yaml
+2021-12-11 21:43:09,242 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,242 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,344 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,345 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,369 INFO    Thread-7  :30202 [sender.py:transition_state():308] send defer: 7
+2021-12-11 21:43:09,370 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:09,370 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 7
+2021-12-11 21:43:09,370 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:09,371 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 7
+2021-12-11 21:43:09,447 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,564 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 8
+2021-12-11 21:43:09,565 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,566 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:09,566 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 8
+2021-12-11 21:43:09,566 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:09,566 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 8
+2021-12-11 21:43:09,567 INFO    SenderThread:30202 [sender.py:transition_state():308] send defer: 9
+2021-12-11 21:43:09,568 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: defer
+2021-12-11 21:43:09,568 DEBUG   SenderThread:30202 [sender.py:send():179] send: final
+2021-12-11 21:43:09,568 INFO    HandlerThread:30202 [handler.py:handle_request_defer():141] handle defer: 9
+2021-12-11 21:43:09,568 DEBUG   SenderThread:30202 [sender.py:send():179] send: footer
+2021-12-11 21:43:09,569 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: defer
+2021-12-11 21:43:09,569 INFO    SenderThread:30202 [sender.py:send_request_defer():304] handle sender defer: 9
+2021-12-11 21:43:09,667 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: poll_exit
+2021-12-11 21:43:09,667 DEBUG   SenderThread:30202 [sender.py:send_request():193] send_request: poll_exit
+2021-12-11 21:43:09,668 INFO    SenderThread:30202 [file_pusher.py:join():182] waiting for file pusher
+2021-12-11 21:43:09,670 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: get_summary
+2021-12-11 21:43:09,671 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: sampled_history
+2021-12-11 21:43:09,673 DEBUG   HandlerThread:30202 [handler.py:handle_request():124] handle_request: shutdown
+2021-12-11 21:43:09,673 INFO    HandlerThread:30202 [handler.py:finish():658] shutting down handler
+2021-12-11 21:43:10,568 INFO    WriterThread:30202 [datastore.py:close():288] close: /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_214259-db72f5kg/run-db72f5kg.wandb
+2021-12-11 21:43:10,668 INFO    SenderThread:30202 [sender.py:finish():947] shutting down sender
+2021-12-11 21:43:10,668 INFO    SenderThread:30202 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-11 21:43:10,668 INFO    SenderThread:30202 [file_pusher.py:join():182] waiting for file pusher
+2021-12-11 21:43:10,671 INFO    MainThread:30202 [internal.py:handle_exit():78] Internal process exited

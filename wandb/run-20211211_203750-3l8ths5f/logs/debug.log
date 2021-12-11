@@ -1,0 +1,6466 @@
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_setup.py:_flush():69] setting env: {'notebook_name': 'RL_experiment'}
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_init.py:_log_setup():337] Logging user logs to /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_203750-3l8ths5f/logs/debug.log
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_init.py:_log_setup():338] Logging internal logs to /home/iqsl/IQSL_Projects/JungKH/Molding/wandb/run-20211211_203750-3l8ths5f/logs/debug-internal.log
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_init.py:init():370] calling init triggers
+2021-12-11 20:37:50,618 INFO    MainThread:20474 [wandb_init.py:init():377] wandb.init called with sweep_config: {}
+config: {'env_name': 'Mold_ENV', 'input_dim': 400, 'eps_max': 1.0, 'eps_min': 0.1, 'eps_decay': 0.0005, 'gamma': 0.99, 'buffer_size': 2000, 'update_start_buffer_size': 200, 'batch_size': 32, 'update_type': 'hard', 'soft_update_tau': 0.002, 'learning_rate': 0.001, 'target_update_freq (unit:frames)': 100}
+2021-12-11 20:37:50,619 INFO    MainThread:20474 [wandb_init.py:init():419] starting backend
+2021-12-11 20:37:50,619 INFO    MainThread:20474 [backend.py:_multiprocessing_setup():72] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-12-11 20:37:50,634 INFO    MainThread:20474 [backend.py:ensure_launched():135] starting backend process...
+2021-12-11 20:37:50,642 INFO    MainThread:20474 [backend.py:ensure_launched():140] started backend process with pid: 20516
+2021-12-11 20:37:50,644 INFO    MainThread:20474 [wandb_init.py:init():424] backend started and connected
+2021-12-11 20:37:50,646 INFO    MainThread:20474 [wandb_init.py:init():472] updated telemetry
+2021-12-11 20:37:50,647 INFO    MainThread:20474 [wandb_init.py:init():491] communicating current version
+2021-12-11 20:37:51,080 INFO    MainThread:20474 [wandb_init.py:init():496] got version response upgrade_message: "wandb version 0.12.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2021-12-11 20:37:51,080 INFO    MainThread:20474 [wandb_init.py:init():504] communicating run to backend with 30 second timeout
+2021-12-11 20:37:51,343 INFO    MainThread:20474 [wandb_init.py:init():529] starting run threads in backend
+2021-12-11 20:37:56,266 INFO    MainThread:20474 [wandb_run.py:_console_start():1623] atexit reg
+2021-12-11 20:37:56,267 INFO    MainThread:20474 [wandb_run.py:_redirect():1497] redirect: SettingsConsole.REDIRECT
+2021-12-11 20:37:56,267 INFO    MainThread:20474 [wandb_run.py:_redirect():1502] Redirecting console.
+2021-12-11 20:37:56,270 INFO    MainThread:20474 [wandb_run.py:_redirect():1558] Redirects installed.
+2021-12-11 20:37:56,271 INFO    MainThread:20474 [wandb_init.py:init():554] run started, returning control to user process
+2021-12-11 20:38:41,204 INFO    MainThread:20474 [wandb_run.py:_atexit_cleanup():1593] got exitcode: 0
+2021-12-11 20:38:41,204 INFO    MainThread:20474 [wandb_run.py:_restore():1565] restore
+2021-12-11 20:38:43,829 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  total_bytes: 791
+}
+
+2021-12-11 20:38:44,106 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  total_bytes: 791
+}
+
+2021-12-11 20:38:44,418 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:44,521 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:44,625 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:44,728 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:44,830 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:44,933 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,036 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,138 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,241 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,344 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,446 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,549 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,651 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,754 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,856 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:45,959 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,061 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,164 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,266 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,368 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,471 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,573 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,676 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,778 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,881 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:46,983 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,086 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,188 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,291 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,393 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,496 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,598 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,701 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,803 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:47,906 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,008 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,111 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,213 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,315 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,418 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,520 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,623 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,725 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,828 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:48,930 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,033 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,135 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,238 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,341 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,443 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,546 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,648 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,751 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,854 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:49,956 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,059 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,161 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,264 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,367 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,469 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,572 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,675 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,777 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,880 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:50,982 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,085 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,187 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,289 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,399 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,501 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,604 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,706 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,808 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:51,911 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,013 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,116 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,218 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,321 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,423 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,526 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,628 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,731 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,833 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:52,936 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,038 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,141 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,243 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,346 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,448 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,551 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,653 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,756 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,858 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:53,961 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,063 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,166 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,268 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,371 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,473 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,575 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,678 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,780 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,883 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:54,985 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,087 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,190 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,292 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,394 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,497 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,599 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,701 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,804 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:55,906 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,009 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,111 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,214 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,316 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,419 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,521 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,623 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,726 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,828 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:56,930 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,033 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,135 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,238 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,340 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,442 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,545 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,647 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,749 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,852 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:57,954 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,056 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,159 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,261 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,364 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,466 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,569 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,671 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,774 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,876 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:58,979 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,082 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,287 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,492 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,594 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,696 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,799 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:38:59,901 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,004 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,106 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,209 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,311 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,414 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,516 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,619 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,722 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,824 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:00,927 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,029 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,132 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,235 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,344 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,446 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,549 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,652 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,754 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,856 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:01,959 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,061 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,164 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,266 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,369 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,471 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,574 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,676 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,779 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,881 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:02,984 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,086 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,188 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,291 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,393 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,496 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,598 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,700 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,803 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:03,905 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,007 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,110 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,212 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,314 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,416 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,518 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,621 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,723 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,825 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:04,928 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,030 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,132 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,234 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,337 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,439 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,542 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,644 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,746 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,848 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:05,950 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,053 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,155 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,257 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,366 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,469 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,571 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,673 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,775 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,878 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:06,980 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,082 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,286 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,491 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,593 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,696 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,798 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:07,900 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,002 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,104 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,207 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,309 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,411 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,513 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,616 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,718 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,820 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:08,923 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,025 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,127 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,230 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,332 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,435 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,537 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,640 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,742 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,845 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:09,947 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,050 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,152 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,255 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,357 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,460 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,563 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,665 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,768 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,870 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:10,973 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,076 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,178 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,281 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,390 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,492 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,595 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,697 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,800 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:11,902 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,005 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,107 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,210 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,313 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,415 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,518 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,620 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,723 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,826 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:12,928 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,031 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,133 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,236 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,338 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,441 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,543 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,645 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,748 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,850 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:13,953 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,055 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,157 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,260 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,362 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,464 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,567 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,669 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,772 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,874 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:14,977 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,079 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,181 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,284 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,386 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,488 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,591 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,693 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,796 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:15,898 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,001 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,103 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,205 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,308 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,417 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,519 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,621 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,724 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,826 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:16,928 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,031 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,133 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,236 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,338 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,440 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,543 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,645 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,748 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,850 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:17,953 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,055 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,158 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,260 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,363 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,465 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,568 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,670 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,773 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,875 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:18,978 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,080 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,182 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,285 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,387 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,490 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,592 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,694 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,797 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:19,899 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,001 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,104 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,206 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,308 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,411 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,513 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,616 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,718 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,821 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:20,923 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,026 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,128 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,230 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,333 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,442 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,544 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,646 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,749 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,851 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:21,953 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,056 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,158 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,260 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,363 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,465 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,568 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,670 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,773 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,875 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:22,977 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,080 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,182 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,285 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,387 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,490 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,593 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,695 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,797 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:23,900 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,003 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,105 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,208 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,310 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,413 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,515 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,618 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,720 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,822 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:24,925 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,027 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,129 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,232 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,334 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,437 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,539 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,641 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,744 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,846 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:25,948 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,051 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,153 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,256 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,358 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,467 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,569 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,672 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,774 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,876 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:26,979 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,081 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,286 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,491 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,594 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,696 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,799 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:27,901 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,004 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,106 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,209 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,311 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,414 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,516 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,619 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,721 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,824 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:28,927 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,030 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,132 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,235 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,337 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,440 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,543 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,645 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,748 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,850 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:29,953 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,055 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,158 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,261 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,363 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,466 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,568 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,671 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,773 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,876 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:30,979 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,081 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,286 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,492 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,594 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,697 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,799 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:31,902 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,004 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,107 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,210 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,313 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,415 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,518 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,620 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,723 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,825 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:32,928 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,030 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,133 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,236 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,338 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,441 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,543 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,648 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,751 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,854 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:33,956 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,059 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,162 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,264 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,367 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,470 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,572 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,675 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,777 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,880 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:34,983 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,085 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,188 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,291 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,393 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,496 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,598 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,701 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,804 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:35,906 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,009 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,111 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,214 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,316 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,419 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,521 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,623 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,726 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,828 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:36,931 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,033 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,135 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,238 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,340 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,442 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,545 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,647 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,750 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,852 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:37,954 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,057 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,159 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,262 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,364 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,466 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,569 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,678 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,780 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,882 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:38,985 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,087 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,190 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,292 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,394 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,497 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,599 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,702 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,804 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:39,906 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,009 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,111 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,214 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,316 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,418 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,521 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,623 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,725 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,828 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:40,930 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,033 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,135 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,237 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,340 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,442 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,545 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,647 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,750 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,852 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:41,955 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,057 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,160 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,262 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,365 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,467 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,570 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,672 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,775 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,877 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:42,979 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,082 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,287 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,491 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,594 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,703 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,805 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:43,907 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,010 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,112 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,215 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,317 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,420 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,522 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,624 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,727 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,829 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:44,931 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,034 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,136 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,239 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,341 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,443 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,546 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,648 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,750 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,853 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:45,955 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,058 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,160 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,262 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,365 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,467 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,570 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,672 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,774 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,877 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:46,979 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,082 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,184 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,286 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,389 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,491 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,594 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,696 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,798 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:47,901 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,003 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,105 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,208 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,310 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,412 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,515 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,618 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,727 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,829 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:48,931 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,034 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,136 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,239 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,342 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,444 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,547 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,649 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,752 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,854 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:49,956 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,059 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,162 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,264 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,367 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,469 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,572 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,674 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,776 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,879 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:50,981 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,084 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,186 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,288 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,391 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,493 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,596 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,698 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,800 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:51,903 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,005 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,108 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,210 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,313 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,415 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,517 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,620 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,722 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,825 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:52,927 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,029 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,132 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,234 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,336 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,439 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,541 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,644 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,753 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,855 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:53,958 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,060 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,163 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,265 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,368 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,470 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,573 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,675 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,778 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,880 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:54,983 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,085 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,188 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,290 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,392 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,495 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,597 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,699 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,802 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:55,904 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,007 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,110 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,212 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,315 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,417 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,520 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,622 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,725 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,827 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:56,930 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,032 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,135 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,237 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,339 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,442 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,544 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,647 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,750 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,852 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:57,955 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,057 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,160 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,262 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,365 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,467 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,570 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,672 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,781 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,884 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:58,987 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,089 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,192 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,295 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,397 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,500 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,602 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,705 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,808 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:39:59,910 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,013 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,115 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,218 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,320 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,423 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,525 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,628 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,730 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,833 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:00,936 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,038 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,141 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,243 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,346 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,448 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,551 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,653 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,756 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,859 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:01,961 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,064 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,166 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,269 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,371 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,474 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,576 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,679 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,781 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,884 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:02,986 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,089 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,191 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,294 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,397 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,499 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,602 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,704 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,814 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:03,916 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,019 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,121 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,224 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,327 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,429 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,532 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,634 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,737 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,839 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:04,942 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,044 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,147 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,250 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,352 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,455 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,557 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,659 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,762 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,864 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:05,967 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 10938
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,069 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,172 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,274 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,377 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,479 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,777 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:06,880 INFO    MainThread:20474 [wandb_run.py:_wait_for_finish():1715] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 11729
+  total_bytes: 11729
+}
+
+2021-12-11 20:40:07,973 INFO    MainThread:20474 [wandb_run.py:_show_summary():1870] rendering summary
+2021-12-11 20:40:07,973 INFO    MainThread:20474 [wandb_run.py:_show_history():1908] rendering history
+2021-12-11 20:40:07,974 INFO    MainThread:20474 [wandb_run.py:_show_files():1937] logging synced files

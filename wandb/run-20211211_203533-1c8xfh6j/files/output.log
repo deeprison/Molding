@@ -1,0 +1,12 @@
+
+Storing initial buffer..
+Traceback (most recent call last):
+  File "Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/train.py", line 105, in <module>
+    agent.train()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/agent.py", line 140, in train
+    self.store(state, action, reward, next_state, done)
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/agent.py", line 101, in store
+    self.memory.store(state, action, reward, next_state, done)
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/1dim_Vanila_DQN/replay_buffer.py", line 32, in store
+    self.state_buffer[self.save_count] = state
+ValueError: could not broadcast input array from shape (20,20) into shape (400,)

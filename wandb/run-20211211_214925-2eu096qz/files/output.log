@@ -1,0 +1,17 @@
+Storing initial buffer..
+Done. Start learning..
+          | Model saved. Recent scores: [-20.099999999999987], Training time: 0.0hrs IQSL_Projects /JungKH /Molding
+-20.099999999999987
+/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py:191: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  np.save(self.model_path+'{}_history_Score_{}_{}hrs.npy'.format(frame_idx, score, training_time), np.array(history_store))
+Traceback (most recent call last):
+  File "Algorithms/Value_Based/Vanila_DQN/train.py", line 99, in <module>
+    agent.train()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 178, in train
+    loss = self.update_behavior_q_net()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 137, in update_behavior_q_net
+    loss.backward()
+  File "/home/iqsl/anaconda3/envs/rlgpf/lib/python3.7/site-packages/torch/tensor.py", line 245, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/iqsl/anaconda3/envs/rlgpf/lib/python3.7/site-packages/torch/autograd/__init__.py", line 147, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag

@@ -5,3 +5,10 @@
 /best_model/
 
 dqn.py
+
+/test
+
+/model_save
+
+/*/*/*/__pycache__/
+/*/*/*/model_save/

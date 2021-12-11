@@ -1,0 +1,10 @@
+
+Storing initial buffer..
+Traceback (most recent call last):
+  File "Algorithms/Value_Based/Vanila_DQN/train.py", line 99, in <module>
+    agent.train()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 163, in train
+    state = self.get_init_state()
+  File "/home/iqsl/IQSL_Projects/JungKH/Molding/Algorithms/Value_Based/Vanila_DQN/agent.py", line 100, in get_init_state
+    action = self.env.action_space.sample()
+AttributeError: 'int' object has no attribute 'sample'
