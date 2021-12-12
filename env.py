@@ -88,6 +88,7 @@ class Env:
 
         # Done 기준 초기화
         self.fill_up_done = np.sum(self.current_image==0)
+        self.time_end_done = (self.image_size**2)
 
         # Agent 위치 초기화
         self.current_position = list(self.start_position)
@@ -141,18 +142,25 @@ class Env:
         self.old_position = deepcopy(self.current_position)
         
         reward = 0
+        done = False
+
         # move
         self.current_position[0] += self.current_direction[0]
         self.current_position[1] += self.current_direction[1]
         if (0<=self.current_position[0]<self.image_size) and (0<=self.current_position[1]<self.image_size): # not move at the edges
             x, y = self.current_position
-            if self.current_image[y][x] in [-1, 1]:
+            if self.current_image[y][x] == 1:
                 self.time += 0.5
-                reward = -0.1
+                reward = -0.2
+                self.time_end_done -= 0.5
+            if self.current_image[y][x] == -1:
+                self.time += 0.5
+                reward = -0.2
+                done = True
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
-                # self.time += 1
-                self.time -= 1
+                self.time += 1
+                # self.time -= 1
                 reward = 1
         else:
             self.current_position = self.old_position
@@ -164,11 +172,11 @@ class Env:
         state[y][x] = 2
         
         self.total_step += 1
-        done = False
         # reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
-        if np.sum(self.current_image==-1) == self.fill_up_done:
+        # if np.sum(self.current_image==-1) == self.fill_up_done:
+        if self.time_end_done <= 0 or np.sum(self.current_image==1) == self.fill_up_done:
             done = True
             # reward = -self.time
         
