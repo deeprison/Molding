@@ -4,6 +4,7 @@ import cv2
 from data.main import *
 from copy import deepcopy
 import matplotlib.pyplot as plt
+import pygame
 import os
 
 class Env:
@@ -217,23 +218,114 @@ class Env:
         plt.savefig('./trajectory.png')
         plt.close()
 
+    def heuristic_mode(self):
+        # Initialize the game engine
+        pygame.init()
+        
+        # Define the colors we will use in RGB format
+        BLACK= ( 0,  0,  0)
+        WHITE= (255,255,255)
+        BLUE = ( 0,  0,255)
+        GREEN= ( 0,255,  0)
+        RED  = (255,  0,  0)
+        
+        # Set the height and width of the screen
+        size  = [400,300]
+        screen= pygame.display.set_mode(size)
+        font= pygame.font.SysFont("consolas",20)
+        
+        pygame.display.set_caption("Game Title")
+        
+        #Loop until the user clicks the close button.
+        done = False
+        flag = None
+        clock= pygame.time.Clock()
+
+        score = 0
+        reward_score = 0
+        episode_step = 0
+        train_step = 0
+        episode = 999999999999
+
+        self.reset()
+
+        while not done:
+        
+            # This limits the while loop to a max of 10 times per second.
+            # Leave this out and we will use all CPU we can.
+            # clock.tick(5)
+            
+            action = 0
+
+            # Main Event Loop
+            for event in pygame.event.get():# User did something
+                '''
+                {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
+                4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
+                '''
+                
+                if event.type == pygame.KEYDOWN:# If user release what he pressed.
+                    a = event.key
+                    if a==ord('q'):
+                        action = 1
+                    elif a==ord('a'):
+                        action = 2
+                    elif a==ord('z'):
+                        action = 3
+                    elif a==ord('e'):
+                        action = 4
+                    elif a==ord('d'):
+                        action = 5
+                    elif a==ord('c'):
+                        action = 6
+                    flag= True
+                elif event.type == pygame.KEYUP:# If user press any key.
+                    action = 0
+                    flag= False
+                elif event.type == pygame.QUIT: # If user clicked close.
+                    done= True                 
+        
+            state, reward, done = self.step(action)
+            image = (deepcopy(self.current_image) + 1)/2
+            image[self.current_position[1]][self.current_position[0]] = 0.3
+            render_img = cv2.resize(image, dsize=(400, 400), interpolation=cv2.INTER_AREA)
+            render = pygame.surfarray.make_surface(render_img)
+            screen.blit(render, (0,0))
+            
+            print(f'reward: {reward}', end='\r')
+            if done:
+                break
+            
+            # Go ahead and update the screen with what we've drawn.
+            # This MUST happen after all the other drawing commands.
+            pygame.display.flip()
+            
+            
+        
+        # Be IDLE friendly
+        pygame.quit()
+
+
+        return 0
+
 import time
 if __name__=="__main__":
     env = Env()
     obs = env.reset()
     max_step = 100000
     step = 0
-    while step < max_step:
-        step += 1
-        env.render()
-        action = np.random.randint(7)
-        state,_,done,_ = env.step(action)
+    env.heuristic_mode()
+    # while step < max_step:
+    #     step += 1
+    #     env.render()
+    #     action = np.random.randint(7)
+    #     state,_,done,_ = env.step(action)
         
-        # if step > 10:
-        #     for row in state:
-        #         print(''.join([f'{n:3}' for n in row]))
-        #     break
+    #     # if step > 10:
+    #     #     for row in state:
+    #     #         print(''.join([f'{n:3}' for n in row]))
+    #     #     break
         
-        if done:
-            env.reset()
+    #     if done:
+    #         env.reset()
     
