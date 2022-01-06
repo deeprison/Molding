@@ -110,7 +110,6 @@ class Env:
         return (state+1)*50
         
     def change_direction(self, action):
-<<<<<<< HEAD
 
         if self.on_direction:
             '''
@@ -135,27 +134,6 @@ class Env:
             
             transformation_matrix = self.generate_transformation_matrix(degree)
             self.current_direction = tuple(np.array(self.current_direction).dot(transformation_matrix).round(0).astype(np.int8))
-=======
-        '''
-        {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
-        4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
-        '''
-        degree = None
-        if action == 0:
-            degree = 0
-        elif action == 1:
-            degree = 45
-        elif action == 2:
-            degree = 90
-        elif action == 3:
-            degree = 135
-        elif action == 4:
-            degree = -45
-        elif action == 5:
-            degree = -90
-        elif action == 6:
-            degree = -135
->>>>>>> d246b7ffcdc28fd46dd150c861aaf258f6fcac66
         
         else:
             self.current_direction = self.all_directions[action]
