@@ -15,6 +15,7 @@ class Env:
                  num_images:int = 5,
                  start_position:tuple = None,
                  start_direction:tuple = None,
+                 on_direction:bool = True,
                  ):
         # images
         self.image_list = image_list
@@ -30,7 +31,7 @@ class Env:
         4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
         '''
         self.state_dim = self.image_list[0].shape
-        self.action_space = 7
+        self.action_space = 7 if on_direction else 8
         self.all_directions = [(0,-1),  #↑
                                (1,-1),  #↗
                                (1,0),   #→
@@ -39,6 +40,7 @@ class Env:
                                (-1,1),  #↙
                                (-1,0),  #←
                                (-1,-1)] #↖
+        self.on_direction = on_direction
         
         # initialize
         self.current_image = deepcopy(self.image_list[np.random.randint(len(self.image_list))])
@@ -108,28 +110,33 @@ class Env:
         return (state+1)*50
         
     def change_direction(self, action):
-        '''
-        {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
-        4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
-        '''
-        degree = None
-        if action == 0:
-            degree = 0
-        elif action == 1:
-            degree = -45
-        elif action == 2:
-            degree = -90
-        elif action == 3:
-            degree = -135
-        elif action == 4:
-            degree = 45
-        elif action == 5:
-            degree = 90
-        elif action == 6:
-            degree = 135
+
+        if self.on_direction:
+            '''
+            {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
+            4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
+            '''
+            degree = None
+            if action == 0:
+                degree = 0
+            elif action == 1:
+                degree = -45
+            elif action == 2:
+                degree = -90
+            elif action == 3:
+                degree = -135
+            elif action == 4:
+                degree = 45
+            elif action == 5:
+                degree = 90
+            elif action == 6:
+                degree = 135
+            
+            transformation_matrix = self.generate_transformation_matrix(degree)
+            self.current_direction = tuple(np.array(self.current_direction).dot(transformation_matrix).round(0).astype(np.int8))
         
-        transformation_matrix = self.generate_transformation_matrix(degree)
-        self.current_direction = tuple(np.array(self.current_direction).dot(transformation_matrix).round(0).astype(np.int8))
+        else:
+            self.current_direction = self.all_directions[action]
     
     def generate_transformation_matrix(self, degree):
         degree *= (np.pi / 180.)
