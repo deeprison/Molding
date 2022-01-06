@@ -110,6 +110,7 @@ class Env:
         return (state+1)*50
         
     def change_direction(self, action):
+<<<<<<< HEAD
 
         if self.on_direction:
             '''
@@ -134,6 +135,27 @@ class Env:
             
             transformation_matrix = self.generate_transformation_matrix(degree)
             self.current_direction = tuple(np.array(self.current_direction).dot(transformation_matrix).round(0).astype(np.int8))
+=======
+        '''
+        {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
+        4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
+        '''
+        degree = None
+        if action == 0:
+            degree = 0
+        elif action == 1:
+            degree = 45
+        elif action == 2:
+            degree = 90
+        elif action == 3:
+            degree = 135
+        elif action == 4:
+            degree = -45
+        elif action == 5:
+            degree = -90
+        elif action == 6:
+            degree = -135
+>>>>>>> d246b7ffcdc28fd46dd150c861aaf258f6fcac66
         
         else:
             self.current_direction = self.all_directions[action]
@@ -164,7 +186,7 @@ class Env:
             if self.current_image[y][x] == -1:
                 self.time += 0.5
                 reward = -0.2
-                done = True
+                # done = True
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
                 self.time += 1
@@ -184,7 +206,7 @@ class Env:
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
         # if np.sum(self.current_image==-1) == self.fill_up_done:
-        if self.time_end_done <= 0 or np.sum(self.current_image==1) == self.fill_up_done:
+        if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done:
             done = True
             # reward = -self.time
         
@@ -225,7 +247,15 @@ class Env:
         plt.savefig('./trajectory.png')
         plt.close()
 
-    def heuristic_mode(self):
+    def heuristic_mode(self, speed=10):
+        """Heuristic Mode for Molding
+
+        Args:
+            speed (int, optional): Game speed. Defaults to 10.
+
+        Returns:
+            (list): Trejectory
+        """
         # Initialize the game engine
         pygame.init()
         
@@ -237,30 +267,29 @@ class Env:
         RED  = (255,  0,  0)
         
         # Set the height and width of the screen
-        size  = [400,300]
+        size  = [400,500]
         screen= pygame.display.set_mode(size)
         font= pygame.font.SysFont("consolas",20)
+        background = pygame.surfarray.make_surface(np.zeros(size))
         
-        pygame.display.set_caption("Game Title")
+        pygame.display.set_caption("Molding")
         
         #Loop until the user clicks the close button.
         done = False
         flag = None
         clock= pygame.time.Clock()
 
-        score = 0
-        reward_score = 0
-        episode_step = 0
-        train_step = 0
-        episode = 999999999999
-
         self.reset()
+        
+        total_reward = 0
+        
+        trajectory = []
 
         while not done:
         
             # This limits the while loop to a max of 10 times per second.
             # Leave this out and we will use all CPU we can.
-            # clock.tick(5)
+            clock.tick(speed)
             
             action = 0
 
@@ -285,43 +314,55 @@ class Env:
                         action = 5
                     elif a==ord('c'):
                         action = 6
+                    else:
+                        action = 0
                     flag= True
-                elif event.type == pygame.KEYUP:# If user press any key.
-                    action = 0
-                    flag= False
+         
                 elif event.type == pygame.QUIT: # If user clicked close.
                     done= True                 
-        
-            state, reward, done = self.step(action)
-            image = (deepcopy(self.current_image) + 1)/2
-            image[self.current_position[1]][self.current_position[0]] = 0.3
+                    break                    
+            # step
+            state, reward, done, info = self.step(action)
+            
+            # save trajectory
+            trajectory.append((state, reward, done, info))
+            
+            # record reward
+            total_reward += reward
+            
+            # image processing for render
+            image = (deepcopy(state.astype(np.uint8))+1)*50
             render_img = cv2.resize(image, dsize=(400, 400), interpolation=cv2.INTER_AREA)
             render = pygame.surfarray.make_surface(render_img)
-            screen.blit(render, (0,0))
             
-            print(f'reward: {reward}', end='\r')
-            if done:
-                break
+            # info display
+            info = font.render(f'time:{self.time_end_done} action:{action} reward:{total_reward:.3f}', True, (255,255,255))
+            
+            # rendering
+            screen.blit(background, (0,0))
+            screen.blit(render, (0,100))
+            screen.blit(info, (0,10))
             
             # Go ahead and update the screen with what we've drawn.
             # This MUST happen after all the other drawing commands.
-            pygame.display.flip()
+            pygame.display.update()
+            # pygame.display.flip()
             
-            
+            print(f'reward: {total_reward:.3f}', end='\r')
+            if done:
+                break
         
         # Be IDLE friendly
         pygame.quit()
-
-
-        return 0
+        return trajectory
 
 import time
 if __name__=="__main__":
-    env = Env()
-    obs = env.reset()
-    max_step = 100000
-    step = 0
-    env.heuristic_mode()
+    env = Env(image_size=10)
+    # obs = env.reset()
+    # max_step = 100000
+    # step = 0
+    env.heuristic_mode(5)
     # while step < max_step:
     #     step += 1
     #     env.render()
