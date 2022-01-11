@@ -110,7 +110,6 @@ class Env:
         return (state+1)*50
         
     def change_direction(self, action):
-<<<<<<< HEAD
 
         if self.on_direction:
             '''
@@ -135,35 +134,17 @@ class Env:
             
             transformation_matrix = self.generate_transformation_matrix(degree)
             self.current_direction = tuple(np.array(self.current_direction).dot(transformation_matrix).round(0).astype(np.int8))
-=======
-        '''
-        {0 : 동작 안함, 1 : 좌측 상단, 2 : 좌측, 3 : 좌측 하단,
-        4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
-        '''
-        degree = None
-        if action == 0:
-            degree = 0
-        elif action == 1:
-            degree = 45
-        elif action == 2:
-            degree = 90
-        elif action == 3:
-            degree = 135
-        elif action == 4:
-            degree = -45
-        elif action == 5:
-            degree = -90
-        elif action == 6:
-            degree = -135
->>>>>>> d246b7ffcdc28fd46dd150c861aaf258f6fcac66
         
         else:
-            self.current_direction = self.all_directions[action]
+            if action==8:
+                self.current_direction = (0 ,0)
+            else:
+                self.current_direction = self.all_directions[action]
     
     def generate_transformation_matrix(self, degree):
         degree *= (np.pi / 180.)
         return np.array([[np.cos(degree), np.sin(degree)],[-np.sin(degree), np.cos(degree)]])
-            
+    
     def step(self, action):
         # change direction
         self.change_direction(action)
@@ -291,7 +272,7 @@ class Env:
             # Leave this out and we will use all CPU we can.
             clock.tick(speed)
             
-            action = 0
+            action = 8
 
             # Main Event Loop
             for event in pygame.event.get():# User did something
@@ -302,20 +283,40 @@ class Env:
                 
                 if event.type == pygame.KEYDOWN:# If user release what he pressed.
                     a = event.key
-                    if a==ord('q'):
-                        action = 1
-                    elif a==ord('a'):
-                        action = 2
-                    elif a==ord('z'):
-                        action = 3
-                    elif a==ord('e'):
-                        action = 4
-                    elif a==ord('d'):
-                        action = 5
-                    elif a==ord('c'):
-                        action = 6
+                    if self.on_direction:
+                        if a==ord('q'):
+                            action = 1
+                        elif a==ord('a'):
+                            action = 2
+                        elif a==ord('z'):
+                            action = 3
+                        elif a==ord('e'):
+                            action = 4
+                        elif a==ord('d'):
+                            action = 5
+                        elif a==ord('c'):
+                            action = 6
+                        else:
+                            action = 0
                     else:
-                        action = 0
+                        if a==ord('w'):
+                            action = 6
+                        elif a==ord('e'):
+                            action = 5
+                        elif a==ord('d'):
+                            action = 4
+                        elif a==ord('c'):
+                            action = 3
+                        elif a==ord('x'):
+                            action = 2
+                        elif a==ord('z'):
+                            action = 1
+                        elif a==ord('a'):
+                            action =0
+                        elif a==ord('q'):
+                            action = 7
+                        else:
+                            action = 8
                     flag= True
          
                 elif event.type == pygame.QUIT: # If user clicked close.
@@ -358,7 +359,7 @@ class Env:
 
 import time
 if __name__=="__main__":
-    env = Env(image_size=10)
+    env = Env(image_size=10, on_direction=False)
     # obs = env.reset()
     # max_step = 100000
     # step = 0
