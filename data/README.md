@@ -7,9 +7,9 @@ alphabet = np.load("./data/s.npz")
 data = alphabet["data"]
 
 # ex) [[0,0], [0,1], [0,2], ...]
-sol01 = alphabet["sol01"] 
-sol02 = alphabet["sol02"]
-sol03 = alphabet["sol03"]
-sol04 = alphabet["sol04"]
+sol1 = alphabet["sol1"] 
+sol2 = alphabet["sol2"]
+sol3 = alphabet["sol3"]
+sol4 = alphabet["sol4"]
 
 ```
