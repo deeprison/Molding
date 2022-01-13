@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import os
 import random
 import operator
@@ -394,3 +395,8 @@ if __name__ == "__main__":
     #     config.vis.gif_duration, 
     #     f"./tmp/solution_{alphabet}_{size}.gif"
     # )
+=======
+import numpy as np 
+
+
+>>>>>>> Stashed changes
