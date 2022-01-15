@@ -38,7 +38,7 @@ class Agent:
     def simulate(self, env):
         copy_env = deepcopy(env)
 
-        print("current_node :", self.current_node)
+        # print("current_node :", self.current_node)
 
         leaf, value, done, breadcrumbs = self.mcg.move_to_leaf(copy_env)
 
@@ -76,13 +76,15 @@ class Agent:
         edges = self.mcg.current_node.edges
         pi = np.zeros(env.action_space, dtype=np.int8)
         values = np.zeros(env.action_space, dtype=np.float32)
-
+        
         for action, edge in edges:
             pi[action] = edge.stats['N']**(1/tau)
             values[action] = edge.stats['Q']
 
-        pi = np.exp(pi)/(np.sum(np.exp(pi)) * 1.0)
-
+        epsilon = 0.00001 if np.sum(pi) == 0 else 0
+        pi = pi/(np.sum(pi)+epsilon)
+        pi = np.exp(pi)/(np.sum(np.exp(pi)))
+        
         return pi, values
 
     def get_allowed_actions(self, env):
@@ -128,7 +130,7 @@ class Agent:
         return (value, probs)
 
     def select_action(self, pi, values, action_mask, tau):
-
+        
         action_mask[action_mask==0] = -np.inf
         if sum(pi) == 0:
             pi = action_mask

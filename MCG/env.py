@@ -170,17 +170,17 @@ class Env:
             x, y = self.current_position
             if self.current_image[y][x] == 1:
                 self.time += 0.5
-                reward = -0.2
+                # reward = -0.2
                 self.time_end_done -= 0.5
             if self.current_image[y][x] == -1:
                 self.time += 0.5
-                reward = -0.2
-                # done = True
+                # reward = -0.2
+                done = True
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
                 self.time += 1
                 # self.time -= 1
-                reward = 1
+                # reward = 1
         else:
             self.current_position = self.old_position
             self.time += 1
@@ -191,12 +191,17 @@ class Env:
         state[y][x] = 2
         
         self.total_step += 1
+        
         # reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
         # if np.sum(self.current_image==-1) == self.fill_up_done:
-        if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done:
+        if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done or done:
             done = True
+            if np.sum(self.current_image==-1) == self.fill_up_done:
+                reward = 1
+            else:
+                reward = -1
             # reward = -self.time
         
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info

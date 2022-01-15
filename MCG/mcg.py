@@ -43,6 +43,8 @@ class Graph:
 
         done = False
         value = 0
+        
+        check_inf_loof = 0
 
         while not current_node.is_leaf() and not done:
 
@@ -58,13 +60,13 @@ class Graph:
             for (action, edge) in current_node.edges:
                 Nb += edge.stats['N']
 
-            print('current_node', current_node)
+            # print('current_node', current_node)
             for idx, (action, edge) in enumerate(current_node.edges):
 
                 U = self.cpuct * ((1-epsilon) * edge.stats['P'] + epsilon * nu[idx]) * np.sqrt(Nb) / (1 + edge.stats['N'])
                 Q = edge.stats['Q']
 
-                print(f"U : {U}, Q : {Q}, N : {edge.stats['N']}, P : {edge.stats['P']}")
+                # print(f"U : {U}, Q : {Q}, N : {edge.stats['N']}, P : {edge.stats['P']}")
 
                 if Q + U > max_QU:
                     max_QU = Q+U
@@ -74,6 +76,17 @@ class Graph:
             next_state, value, done, _ = env.step(simulation_action)
             current_node = simulation_edge.out_node
             breadcrumbs.append(simulation_edge)
+            
+            check_inf_loof += 1
+            if check_inf_loof > 5000:
+                print(current_node)
+                print(current_node.edges)
+                print(current_node.is_leaf())
+                print(simulation_action)
+                print(simulation_edge.name)
+                print(simulation_edge.out_node)
+                
+                raise "inf loof"
 
         return current_node, value, done, breadcrumbs
 
