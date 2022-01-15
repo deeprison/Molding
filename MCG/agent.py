@@ -64,11 +64,8 @@ class Agent:
                 if str(next_state.flatten()) not in self.mcg.tree:
                     node = Node(next_state, str(next_state.flatten()))
                     self.mcg.add_node(node)
-                else:
-                    node = self.mcg.tree[str(next_state.flatten())]
-
-                new_edge = Edge(leaf, node, probs[idx], action)
-                leaf.edges.append((action, new_edge))
+                    new_edge = Edge(leaf, node, probs[idx], action)
+                    leaf.edges.append((action, new_edge))
 
         return ((value, breadcrumbs))
 

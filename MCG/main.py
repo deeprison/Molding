@@ -22,7 +22,6 @@ for epoch in range(1, epochs+1):
 
     while not done:
 
-        env.render()
         action, pi, value, values = agent.choose_action(state, action_mask, tau, simulation_times, env)
 
         if agent.buffer != None:

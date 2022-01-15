@@ -85,6 +85,7 @@ class Graph:
                 print(simulation_action)
                 print(simulation_edge.name)
                 print(simulation_edge.out_node)
+                print(done)
                 
                 raise "inf loof"
 
