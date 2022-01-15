@@ -31,14 +31,14 @@ class Env:
         4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
         '''
         self.state_dim = self.image_list[0].shape
-        self.action_space = 7 if on_direction else 8
-        self.all_directions = [(0,-1),  #↑
-                               (1,-1),  #↗
-                               (1,0),   #→
+        self.action_space = 7 if on_direction else 9
+        self.all_directions = [(0,-1),  #←
+                               (1,-1),  #↖
+                               (1,0),   #↓
                                (1,1),   #↘
-                               (0,1),   #↓
-                               (-1,1),  #↙
-                               (-1,0),  #←
+                               (0,1),   #→
+                               (-1,1),  #↗
+                               (-1,0),  #↑
                                (-1,-1)] #↖
         self.on_direction = on_direction
         
@@ -326,7 +326,7 @@ class Env:
             state, reward, done, info = self.step(action)
             
             # save trajectory
-            trajectory.append((state, reward, done, info))
+            trajectory.append((state, action, reward, done, info))
             
             # record reward
             total_reward += reward
