@@ -1,3 +1,6 @@
+import sys
+sys.path.append('..')
+
 import numpy as np
 from numpy.lib.utils import info
 import cv2
@@ -6,6 +9,7 @@ from copy import deepcopy
 import matplotlib.pyplot as plt
 import pygame
 import os
+from copy import copy, deepcopy
 
 class Env:
     def __init__(self,
@@ -17,6 +21,8 @@ class Env:
                  start_direction:tuple = None,
                  on_direction:bool = True,
                  ):
+
+        
         # images
         self.image_list = image_list
         if self.image_list == None:
@@ -31,7 +37,7 @@ class Env:
         4 : 우측 상단, 5 : 우측, 6 : 우측 하단}
         '''
         self.state_dim = self.image_list[0].shape
-        self.action_space = 7 if on_direction else 9
+        self.action_space = 7 if on_direction else 8
         self.all_directions = [(0,-1),  #←
                                (1,-1),  #↖
                                (1,0),   #↓
@@ -156,8 +162,10 @@ class Env:
         done = False
 
         # move
-        self.current_position[0] += self.current_direction[0]
-        self.current_position[1] += self.current_direction[1]
+        # self.current_position[0] += self.current_direction[0]
+        # self.current_position[1] += self.current_direction[1]
+        self.current_position[0] += self.current_direction[1]
+        self.current_position[1] += self.current_direction[0]
         if (0<=self.current_position[0]<self.image_size) and (0<=self.current_position[1]<self.image_size): # not move at the edges
             x, y = self.current_position
             if self.current_image[y][x] == 1:
@@ -167,7 +175,7 @@ class Env:
             if self.current_image[y][x] == -1:
                 self.time += 0.5
                 reward = -0.2
-                # done = True
+                done = True
             elif self.current_image[y][x] == 0:
                 self.current_image[y][x] = -1
                 self.time += 1
@@ -183,20 +191,34 @@ class Env:
         state[y][x] = 2
         
         self.total_step += 1
+        
         # reward = 0
         # if self.time >= self.time_end_done or np.sum(self.current_image) == self.fill_up_done:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
         # if np.sum(self.current_image==-1) == self.fill_up_done:
-        if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done:
-
-
+        if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done or done:
             done = True
-
-        # if np.sum(self.current_image==-1) == self.fill_up_done:
-        #     done = True
-
+            # if np.sum(self.current_image==-1) == self.fill_up_done:
+            #     reward = 1
+            # else:
+            #     reward = -1
+            # reward = -self.time
+        
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
 
+    def get_action_mask(self):
+        
+        action_mask = np.zeros(self.action_space)
+
+        for idx, direction in enumerate(self.all_directions):
+            if 0 > self.current_position[0]+direction[1] or self.current_position[0]+direction[1] >= self.image_size:
+                continue
+            if 0 > self.current_position[1]+direction[0] or self.current_position[1]+direction[0] >= self.image_size:
+                continue
+            action_mask[idx] = 1
+
+        return action_mask
+                
     def render(self, on_terminal=False, add_comment = ''):
         if on_terminal:
             image = deepcopy(self.current_image)
@@ -330,7 +352,7 @@ class Env:
             state, reward, done, info = self.step(action)
             
             # save trajectory
-            trajectory.append((state, action, reward, done, info))
+            trajectory.append((state, reward, done, info))
             
             # record reward
             total_reward += reward
@@ -381,5 +403,4 @@ if __name__=="__main__":
         
     #     if done:
     #         env.reset()
-
     

@@ -188,15 +188,11 @@ class Env:
         # if self.total_step >= self.time_end_done or np.sum(self.current_image==1) == self.fill_up_done:
         # if np.sum(self.current_image==-1) == self.fill_up_done:
         if self.time_end_done <= 0 or np.sum(self.current_image==-1) == self.fill_up_done:
-
-
             done = True
-
-        # if np.sum(self.current_image==-1) == self.fill_up_done:
-        #     done = True
-
+            # reward = -self.time
+        
         return (deepcopy(state.astype(np.uint8))+1)*50, reward, done, self.info
-
+                
     def render(self, on_terminal=False, add_comment = ''):
         if on_terminal:
             image = deepcopy(self.current_image)
@@ -381,5 +377,4 @@ if __name__=="__main__":
         
     #     if done:
     #         env.reset()
-
     
