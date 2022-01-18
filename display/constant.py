@@ -1,16 +1,24 @@
 SIDE_WIDTH = 400
 INTRO_IMG = "http://drive.google.com/uc?export=view&id=1j_N8poUJqmJ1PJSf9Fe5Wn9q0OmP9qo9"
 
-DATASETS = [
+DATASETS_BASIC = [
     "SQUARE", "TRIANGLE", "CIRCLE"
 ]
-DIFFICULTY = [
+DIFFICULTY_BASIC = [
     "Low", "Medium", "High", "Extreme"
 ]
-SIZE = [
+SIZE_BASIC = [
     f"{i}x{i}" for i in range(5, 21, 5)
 ]
 
+DATASETS_ALPABETS = [
+    a.upper() for a in 
+        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+]
+SIZE_ALPABETS = [
+    f"{i}x{i}" for i in range(20, 101, 10)
+]
 
 BASIC_KEY = {
     "low_5x5": "1VTJ7EVm6GbFqJkOYoPtJc75gArEifO23",

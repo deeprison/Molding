@@ -11,3 +11,12 @@ dqn.py
 /jupyter/
 
 /tmp/
+
+/test
+
+/model_save
+
+/*/*/__pycache__/
+/*/*/*/__pycache__/
+/*/*/*/model_save/
+/wandb

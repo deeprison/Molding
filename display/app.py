@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 from constant import *
-from utils import get_data_info, visualize
+from utils import *
 
 
 st.set_page_config(
@@ -42,11 +42,13 @@ with st.sidebar:
 
 
 data = data.lower()
-diff = diff.lower()
+diff = diff.lower() if diff is not None else None
 size = size.lower()
 
 for _ in range(1):
     st.write("#")
 
-
-visualize(data, diff, size, 200)
+if diff is not None:
+    visualize_basic(data, diff, size, 200)
+else:
+    visualize_alphabet(data, size, 200)

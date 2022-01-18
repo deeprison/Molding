@@ -14,7 +14,7 @@ import wandb
 
 env_list = {
     0: "CartPole-v0",
-    1: "CartPole-v2",
+    1: "CartPole-v1",
     2: "LunarLander-v2",
     3: "Breakout-v4",
     4: "BreakoutDeterministic-v4",
@@ -23,22 +23,22 @@ env_list = {
     7: "PongDeterministic-v4",
 }
 # env.seed(0)
-env_name = env_list[2]
-env = gym.make(env_name)
-input_dim = env.observation_space.shape[0]
+env_name = env_list[0] 
+env = gym.make(env_name) 
+input_dim = env.observation_space.shape[0] 
 print("env_name", env_name) 
 print(env.action_space.n) 
 
-update_start_buffer_size = 200
-tot_train_frames = 500000
+update_start_buffer_size = 200 
+tot_train_frames = 20000 
 
 gamma = 0.99
-buffer_size = int(20000) 
+buffer_size = int(2000) 
 batch_size = 32           
 update_type = 'hard'
 soft_update_tau = 0.002
-learning_rate = 0.0005
-target_update_freq = 100
+learning_rate = 0.0001
+target_update_freq = 200
 current_update_freq = 1 # Update frequency of current Q-Network.  
 skipped_frame = 0
 

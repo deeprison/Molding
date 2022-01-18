@@ -1,16 +1,9 @@
 import os
-import cv2
 import gym    
-import time    
 import numpy as np
 
-import matplotlib.pyplot as plt
-from IPython.display import clear_output
-
+from datetime import datetime
 from agent import Agent
-from replay_buffer import ReplayBuffer
-from qnetwork import QNetwork 
-
 import wandb   
 
 env_list = {
@@ -23,7 +16,7 @@ env_list = {
     6: "BoxingDeterministic-v4",
     7: "PongDeterministic-v4",
 }
-env_name = env_list[4]
+env_name = env_list[6]
 env = gym.make(env_name)
 input_dim = 84
 input_frame = 4
@@ -61,22 +54,16 @@ Vmin = -10
 
 model_number = 0
 main_path = './model_save/'
-model_save_path = \
-f'{rand_name}_{env_name}_tot_f:{tot_train_frames}f\
-_gamma:{gamma}_tar_up_frq:{target_update_freq}f\
-_up_type:{update_type}_soft_tau:{soft_update_tau}f\
-_batch:{batch_size}_buffer:{buffer_size}f\
-_up_start:{update_start_buffer_size}_lr:{learning_rate}f\
-_device:{device_num}_rand:{rand_seed}_{model_number}/'
-if not os.path.exists(main_path):
-    os.mkdir(main_path)
-    model_save_path = main_path + model_save_path
-    if not os.path.exists(model_save_path):
-        os.mkdir(model_save_path)
-else:
-    model_save_path = main_path + model_save_path
-    if not os.path.exists(model_save_path):
-        os.mkdir(model_save_path)
+now = datetime.now()
+rand_name = f'{now.date()} {now.hour}:{now.minute}'
+folder_name = os.getcwd().split('/')[-1] 
+
+model_name = f'{env_name}_{rand_name}'
+model_save_path = f'./model_save/{model_name}/'
+if not os.path.exists('./model_save/'):
+    os.mkdir('./model_save/')
+if not os.path.exists(model_save_path):
+    os.mkdir(model_save_path)
 print("model_save_path:", model_save_path)
 
 plot_options = {0: 'wandb', 1: 'inline', 2: False} 
@@ -87,8 +74,9 @@ if plot_option=='wandb':
     project_name = 'rainbow-without-per'    
     os.environ['WANDB_NOTEBOOK_NAME'] = 'RL_experiment'
     wandb.init(
-            project=project_name,
-            name=f"{rand_name}_{folder_name}_{env_name}",
+            entity="molding_rl",
+            project="Noisy_Multi-2dim",
+            name=f"{rand_name}_{env_name}",
             config={"env_name": env_name, 
                     "input_frame": input_frame,
                     "input_dim": input_dim,
