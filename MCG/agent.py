@@ -1,10 +1,11 @@
 from copy import deepcopy
 import gc
 import numpy as np
+import random
 
 import torch
 import torch.optim as opt
-from torch import functional as F
+from torch.nn import functional as F
 
 from memory import MCTSMemory
 from mcg import Node, Edge, Graph
@@ -36,6 +37,8 @@ class Agent:
         return action, pi, value, values
 
     def simulate(self, env):
+
+
         copy_env = deepcopy(env)
 
         # print("current_node :", self.current_node)
@@ -71,7 +74,7 @@ class Agent:
 
     def get_action_value(self, env, tau):
         edges = self.mcg.current_node.edges
-        pi = np.zeros(env.action_space, dtype=np.int8)
+        pi = np.zeros(env.action_space, dtype=np.int32)
         values = np.zeros(env.action_space, dtype=np.float32)
         
         for action, edge in edges:
@@ -79,6 +82,7 @@ class Agent:
             values[action] = edge.stats['Q']
 
         epsilon = 0.00001 if np.sum(pi) == 0 else 0
+
         pi = pi/(np.sum(pi)+epsilon)
         pi = np.exp(pi)/(np.sum(np.exp(pi)))
         
@@ -128,20 +132,24 @@ class Agent:
 
     def select_action(self, pi, values, action_mask, tau):
         
-        action_mask[action_mask==0] = -np.inf
-        if sum(pi) == 0:
-            pi = action_mask
-        else:
-            pi = action_mask*pi
+        try:
+            action_mask[action_mask==0] = -np.inf
+            if sum(pi) == 0:
+                pi = action_mask
+            else:
+                pi = action_mask*pi
 
-        pi = np.exp(pi)/np.sum(np.exp(pi))
+            pi = np.exp(pi)/np.sum(np.exp(pi))
 
-        if tau == 0:
-            actions = np.argwhere(pi == max(pi))
-            action = np.random.choice(actions)[0]
-        else:
-            action_idx = np.random.multinomial(1, pi)
-            action = np.where(action_idx==1)[0][0]
+            if tau == 0:
+                actions = np.argwhere(pi == max(pi))
+                action = np.random.choice(actions)[0]
+            else:
+                action_idx = np.random.multinomial(1, pi)
+                action = np.where(action_idx==1)[0][0]
+        except Exception as e:
+            print(pi)
+            raise e
 
         value = values[action]
 
@@ -149,18 +157,18 @@ class Agent:
 
     def train(self):
         for i in range(10):
-            minibatch = np.random.sample(self.buffer.ltmemory, min(32, len(self.buffer.ltmemory)))
+            minibatch = random.sample(self.buffer.ltmemory, min(128, len(self.buffer.ltmemory)))
             training_states = np.array([row['state'] for row in minibatch])            
-            training_targets = {'value_head' : np.array([row['value'] for row in minibatch]), 'policy_head' : np.array([row['AV'] for row in minibatch])}
-            history = self.fit(training_states, training_targets, epochs=10, verbose=1, batch_size = 32)
+            training_targets = {'value_head' : np.array([row['value'] for row in minibatch]), 'policy_head' : np.array([row['action_values'] for row in minibatch])}
+            history = self.fit(training_states, training_targets)
         return history
 
     def fit(self, states, targets):
         
         v_loss = 0
         p_loss = 0
-        for s, v_t, p_t in zip (states, targets['value_head'], targets['policy_head']):
-            v, p = self._model(s.state['state'])
+        for s, v_t, p_t in zip(states, targets['value_head'], targets['policy_head']):
+            p, v = self.model(torch.tensor(s, dtype=torch.float32).unsqueeze(0).unsqueeze(0).to(self.device))
             v_loss += F.mse_loss(torch.Tensor([v_t]).to(self.device), v.squeeze(0))
             p_loss += self.softmax_cross_entropy_with_logits(p_t, p)
         
@@ -168,10 +176,9 @@ class Agent:
         p_loss /= len(states)
         
         loss = 0.5*v_loss + 0.5*p_loss
-        self._optimizer.zero_grad()
+        self.optimizer.zero_grad()
         loss.backward(retain_graph=True)
-        self._optimizer.step()
-        self._scheduler.step()
+        self.optimizer.step()
         
         return {'loss' : loss, 'value_head_loss' : v_loss, 'policy_head_loss' : p_loss}
     

@@ -135,12 +135,11 @@ class LSTM(nn.Module):
 
 class GPN(torch.nn.Module):
     
-    def __init__(self, n_feature, n_hidden, n_output):
+    def __init__(self, n_feature, n_hidden):
         super(GPN, self).__init__()
         self.city_size = 0
         self.batch_size = 0
         self.dim = n_hidden
-        self.n_output = n_output
         
         # lstm for first turn
         self.lstm0 = nn.LSTM(n_hidden, n_hidden)
@@ -294,7 +293,7 @@ if __name__=="__main__":
     img = np.load('./data/square/npy/extreme_5x5.npy')
     env = Env([img])
 
-    model = GPN(n_feature=25, n_hidden=128, n_output=7).cuda()
+    model = GPN(n_feature=2, n_hidden=128).cuda()
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
     graph = Graph(env)
