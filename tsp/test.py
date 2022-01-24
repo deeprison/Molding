@@ -9,101 +9,85 @@ import matplotlib.pyplot as plt
 from gpn import GPN
 from tqdm import tqdm
 import numpy as np
-
-
-# Test Data
-class TSPDataset(Dataset):
-    
-    def __init__(self, dataset_fname=None, train=False, size=50, num_samples=100000, random_seed=1111):
-        super(TSPDataset, self).__init__()
-        
-        torch.manual_seed(random_seed)
-        
-        self.data_set = []
-        
-        # randomly sample points uniformly from [0, 1]
-        for l in tqdm(range(num_samples)):
-            x = torch.FloatTensor(2, size).uniform_(0, 1)
-            self.data_set.append(x)
-        
-        self.size = len(self.data_set)
-    
-    def __len__(self):
-        return self.size
-    
-    def __getitem__(self, idx):
-        return self.data_set[idx]
+from pathlib import Path
+from sns import small_neighborhood_search, cal_distance
 
 # args
 parser = argparse.ArgumentParser(description="GPN test")
-parser.add_argument('--size', default=50, help="size of model")
+parser.add_argument('--size', default=400, help="size of model")
 args = vars(parser.parse_args())
 size = int(args['size'])
 
-load_data = './data/test_tsp'+str(size)+'.pt'
-test_data = torch.load(load_data)
+device = torch.device('cuda:2')
 
-# there are 1000 test data
-X = torch.zeros(1000, size, 2)
-for i in range(1000):
-    for j in range(2):
-        X[i,:,j] = test_data[i][j]
+# test image
+data_path = '../data/data/s.npy'
+img = np.load(data_path)
+orig_X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)
 
-Z = X.view(4, 250, size, 2).clone()
-
-load_root ='./model/gpn_tsp'+str(size)+'.pt'
+load_root ='./model/gpn_tsp_a_'+str(size)+'.pt'
 
 print('=========================')
 print('test for TSP'+str(size))
 print('=========================')
 
-
-model = torch.load(load_root).cuda()
+model = torch.load(load_root).to(device)
+model.eval()
 
 # greedy
-B = 250
 total_tour_len = 0
 
-for i in range(4):
-    
-    tour_len = 0
-    
-    X = Z[i].cuda()
-    
-    mask = torch.zeros(B, size).cuda()
-    
-    R = 0
-    Idx = []
-    reward = 0
-    
-    Y = X.view(B, size, 2)           # to the same batch size
-    x = Y[:,0,:]
-    h = None
-    c = None
-    
-    for k in range(size):
-        
-        output, h, c, _ = model(x=x, X_all=X, h=h, c=c, mask=mask)
-        
-        idx = torch.argmax(output, dim=1)
-        Idx.append(idx.data)
+tour_len = 0
 
-        Y1 = Y[[i for i in range(B)], idx.data].clone()
-        if k == 0:
-            Y_ini = Y1.clone()
-        if k > 0:
-            reward = torch.norm(Y1-Y0, dim=1)
+X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)/int(size**(1/2))
+X = torch.Tensor(X).to(device)
+
+B = X.shape[0]
+size = X.shape[1]
+
+mask = torch.zeros(B, size).to(device)
+
+R = 0
+Idx = []
+reward = 0
+
+Y = X.view(B, size, 2)           # to the same batch size
+x = Y[:,0,:]
+h = None
+c = None
+
+for k in range(size):
     
-        Y0 = Y1.clone()
-        x = Y[[i for i in range(B)], idx.data].clone()
-        
-        R += reward
+    output, h, c, _ = model(x=x, X_all=X, h=h, c=c, mask=mask)
+    
+    idx = torch.argmax(output, dim=1)
+    Idx.append(idx.detach().cpu().numpy()[0])
 
-        mask[[i for i in range(B)], idx.data] += -np.inf
-        
-    R += torch.norm(Y1-Y_ini, dim=1)
-    tour_len += R.mean().item()
-    print('tour length:', tour_len)
-    total_tour_len += tour_len
+    Y1 = Y[[i for i in range(B)], idx.data].clone()
+    if k == 0:
+        Y_ini = Y1.clone()
+    if k > 0:
+        reward = torch.norm(Y1-Y0, dim=1)
 
-print('total tour length:', total_tour_len/4)
+    Y0 = Y1.clone()
+    x = Y[[i for i in range(B)], idx.data].clone()
+    
+    R += reward
+
+    mask[[i for i in range(B)], idx.data] += -np.inf
+    
+# tour_len += R.mean().item()
+print('Original tour length:', cal_distance(Idx, orig_X[0]))
+# total_tour_len += tour_len
+
+search_size = 40
+
+final_sol = small_neighborhood_search(orig_X[0], Idx, search_size, 1000)
+
+pred = orig_X[0][final_sol].T
+plt.imshow(img)
+plt.plot(pred[1], pred[0])
+plt.savefig(f'./pred_{Path(data_path).stem}_{str(size)}.png')
+plt.close()
+
+print('Final tour length:', cal_distance(final_sol, orig_X[0]))

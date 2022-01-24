@@ -35,7 +35,7 @@ if __name__ == "__main__":
     B_val = int(args['val_size'])    # validation size
     steps = int(args['train_size'])    # training steps
     n_epoch = int(args['epoch'])    # epochs
-    save_root ='./model/gpn_tsp'+str(size)+'.pt'
+    save_root ='./model/gpn_tsp_a_'+str(size)+'.pt'
     
     print('=========================')
     print('prepare to train')
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     device = torch.device('cuda:2')
     
     model = GPN(n_feature=2, n_hidden=4, device=device).to(device)
-    # model = torch.load(save_root).to(device)
+    model = torch.load(save_root).to(device)
     optimizer = optim.Adam(model.parameters(), lr=learn_rate)
 
     lr_decay_step = 2500
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     opt_scheduler = lr_scheduler.MultiStepLR(optimizer, range(lr_decay_step, lr_decay_step*1000,
                                          lr_decay_step), gamma=lr_decay_rate)
     
-    img = np.load('../data/alphabet/a/a_20.npy')
+    img = np.load('../data/data/a.npy')
     X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)
 
     # B = X.shape[0]
@@ -81,6 +81,7 @@ if __name__ == "__main__":
             optimizer.zero_grad()
 
             X = np.random.rand(B, size, 2)
+
             # X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)/20
         
             X = torch.Tensor(X).to(device)
@@ -119,7 +120,7 @@ if __name__ == "__main__":
                 
                 mask[[i for i in range(B)], idx.data] += -np.inf 
                 
-            R += torch.norm(Y1-Y_ini, dim=1)
+            # R += torch.norm(Y1-Y_ini, dim=1)
             
             # self-critic base line
             mask = torch.zeros(B,size).to(device)
@@ -152,7 +153,7 @@ if __name__ == "__main__":
                 C += baseline
                 mask[[i for i in range(B)], idx.data] += -np.inf
         
-            C += torch.norm(Y1-Y_ini, dim=1)
+            # C += torch.norm(Y1-Y_ini, dim=1)
         
             gap = (R-C).mean()
             loss = ((R-C-gap)*logprobs).mean()
@@ -177,7 +178,7 @@ if __name__ == "__main__":
                 
                 tour_len = 0
 
-                X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)/20
+                X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)/int(size**(1/2))
                 X = torch.Tensor(X).to(device)
                 
                 mask = torch.zeros(B_val,size_val).to(device)
@@ -215,13 +216,13 @@ if __name__ == "__main__":
                     
                     mask[[i for i in range(B_val)], idx.data] += -np.inf
             
-                R += torch.norm(Y1-Y_ini, dim=1)
+                # R += torch.norm(Y1-Y_ini, dim=1)
                 tour_len += R.mean().item()
                 print('validation tour length:', tour_len)
                 pred = X_val[0][Idx].T 
                 plt.imshow(img)
                 plt.plot(pred[1], pred[0])
-                plt.savefig(f'./pred_{str(size)}.png')
+                plt.savefig(f'./pred_a_{str(size)}.png')
                 plt.close()
 
             print(f'step: {i+1}/{steps} {i/steps*100:3.1f}%, loss:{loss.detach().cpu().numpy():.5f}', end='\r')
