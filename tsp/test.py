@@ -10,7 +10,7 @@ from gpn import GPN
 from tqdm import tqdm
 import numpy as np
 from pathlib import Path
-from sns import small_neighborhood_search, cal_distance
+from sns import two_opt, cal_distance
 
 # args
 parser = argparse.ArgumentParser(description="GPN test")
@@ -21,7 +21,7 @@ size = int(args['size'])
 device = torch.device('cuda:2')
 
 # test image
-data_path = '../data/data/s.npy'
+data_path = '../data/data/e.npy'
 img = np.load(data_path)
 orig_X = np.expand_dims(np.asarray(np.where(img==0)).T, axis=0)
 
@@ -80,14 +80,14 @@ for k in range(size):
 print('Original tour length:', cal_distance(Idx, orig_X[0]))
 # total_tour_len += tour_len
 
-search_size = 40
+search_size = 100
 
-final_sol = small_neighborhood_search(orig_X[0], Idx, search_size, 1000)
+best_route, best_distance = two_opt(Idx, orig_X[0], improvement_threshold=0.001)
 
-pred = orig_X[0][final_sol].T
+pred = orig_X[0][best_route].T
 plt.imshow(img)
 plt.plot(pred[1], pred[0])
 plt.savefig(f'./pred_{Path(data_path).stem}_{str(size)}.png')
 plt.close()
 
-print('Final tour length:', cal_distance(final_sol, orig_X[0]))
+print('Final tour length:', best_distance)
