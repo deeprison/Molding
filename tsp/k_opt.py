@@ -1,3 +1,4 @@
+from turtle import distance
 import numpy as np
 from copy import copy
 
@@ -41,8 +42,8 @@ def two_opt(initial_route, data, improvement_threshold=0.01):
                 start = best_route[swap_first]
                 end = best_route[swap_last]
                 after_end = best_route[swap_last+1]
-                before = distance_matrix[before_start][start] + distance_matrix[end][after_end]
-                after = distance_matrix[before_start][end] + distance_matrix[start][after_end]
+                before = distance_matrix[before_start][start] + distance_matrix[start][end] + distance_matrix[end][after_end]
+                after = distance_matrix[before_start][end] + distance_matrix[end][start] + distance_matrix[start][after_end]
 
                 if after < before:
                     new_route = swap(best_route, swap_first, swap_last)
@@ -57,6 +58,54 @@ def two_opt(initial_route, data, improvement_threshold=0.01):
 
     return best_route, best_distance
 
+def three_opt(initial_route, data, improvement_threshold=0.01):
+    best_route = initial_route
+    best_distance = cal_distance(best_route, data)
+    improvement_factor = 1
+    size = len(initial_route)
+    trial_count = 0
+    max_count = 100000
+    while improvement_factor > improvement_threshold and max_count > trial_count:
+        previous_best = best_distance
+        for swap_first in range(1, size - 3):
+            if max_count < trial_count:
+                    continue
+            for swap_second in range(swap_first + 1, size - 2):
+                if max_count < trial_count:
+                    continue
+                for swap_last in range(swap_second + 1, size - 1):
+
+                    candi_route = swap(best_route, swap_second, swap_last)
+                    if cal_distance(candi_route, data) < best_distance:
+                        best_route = copy(candi_route)
+                        best_distance = cal_distance(candi_route, data)
+                        continue
+                    
+                    candi_route = swap(best_route, swap_first, swap_second)
+                    if cal_distance(candi_route, data) < best_distance:
+                        best_route = copy(candi_route)
+                        best_distance = cal_distance(candi_route, data)
+                        continue
+
+                    candi_route = swap(best_route, swap_first, swap_second)
+                    candi_route = swap(candi_route, swap_second, swap_last)
+                    if cal_distance(candi_route, data) < best_distance:
+                        best_route = copy(candi_route)
+                        best_distance = cal_distance(candi_route, data)
+                        continue
+
+                    candi_route = swap(best_route, swap_first, swap_last)
+                    if cal_distance(candi_route, data) < best_distance:
+                        best_route = copy(candi_route)
+                        best_distance = cal_distance(candi_route, data)
+                        continue
+        
+                    trial_count += 1
+                    print(f'Processing... trial count:{trial_count}, current best: {best_distance}', end='\r')
+        improvement_factor = 1 - best_distance/previous_best
+    print(f'Processing... trial count:{trial_count} --- DONE!')
+
+    return best_route, best_distance
 
 if __name__=="__main__":
     data = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5]]
@@ -64,7 +113,8 @@ if __name__=="__main__":
 
     search_size = 4
 
-    print(two_opt(feasible_sol, data))
+    # print(two_opt(feasible_sol, data))
+    print(three_opt(feasible_sol, data))
 
     # for i in range(len(feasible_sol)-search_size+1):
     #     start = feasible_sol[i]
