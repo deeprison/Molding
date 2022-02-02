@@ -5,6 +5,7 @@ from ga_utils import *
 
 class Solver:
     def __init__(self, env, n_routes, n_generations, elite_ratio=.5, mutate_ratio=.01, print_iter=10):
+        self.env = env
         self.Initializer = InitRoute(env, n_routes)
         self.n_routes = n_routes
         self.n_generations = n_generations
@@ -15,7 +16,10 @@ class Solver:
         self.init_routes = self.Initializer.routes
 
     def train(self):
-        routes, _ = self.build_next_generation(self.init_routes)
+        routes, rank_info = self.build_next_generation(self.init_routes)
+        rank_info = list(rank_info.values())
+        print(f"Initial - [Min:{min(rank_info):.3f}] [Mean:{np.mean(rank_info):.3f}]")
+
         for i in range(1, self.n_generations):
             routes, rank_info = self.build_next_generation(routes)
             if i % self.print_iter == 0:
@@ -26,7 +30,8 @@ class Solver:
 
     def build_next_generation(self, routes):
         ranked, rank_info = rank_routes(routes)
-        parent, child = self.breed_routes(routes, ranked, self.elite_ratio)
+        # parent, child = self.breed_routes(routes, ranked, self.elite_ratio)
+        parent, child = self.regen_routes(self.env, routes, ranked, self.elite_ratio)
         new_routes = self.mutate_routes(parent+child, self.mutate_ratio)
         return new_routes, rank_info
 
@@ -54,9 +59,25 @@ class Solver:
         return parents, child
 
     @staticmethod
+    def regen_routes(env, routes, ranked, n_elite=None):
+        if n_elite is None:
+            n_elite = int(len(ranked) * 0.2)
+        else:
+            n_elite = int(len(ranked) * n_elite)
+        n_regen = len(ranked) - n_elite
+
+        pool_indexes = ranked[:n_elite]
+        parents = [routes[i] for i in pool_indexes]
+        child = []
+        for _ in range(n_regen):
+            sample = random.sample(parents, 1)[0]
+            child.append(regeneration(env, sample))
+        return parents, child
+
+    @staticmethod
     def mutate_routes(routes, ratio=.01):
-        mutated = []
-        for route in routes:
+        mutated = [routes[0]]
+        for route in routes[1:]:
             if np.random.random() < ratio:
                 mutated.append(mutate(route))
             else:

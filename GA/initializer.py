@@ -6,25 +6,79 @@ def get_distance(crd1, crd2):
     return np.sqrt((crd1[0] - crd2[0]) ** 2 + (crd1[1] - crd2[1]) ** 2)
 
 
+def get_crds(env):
+    pos_crds, imp_crds = [], []
+    for i in range(len(env)):
+        for j in range(len(env[0])):
+            if env[i, j] == 0:
+                pos_crds.append((i, j))
+            else:
+                imp_crds.append((i, j))
+    return pos_crds, imp_crds
+
+
+def get_candidates(env, crd, ways=None, died=None):
+    if ways is None:
+        ways = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+    if died is None:
+        died = []
+
+    candidates = []
+    for i, j in ways:
+        x, y = crd[0]+i, crd[1]+j
+        if (0 <= x < env.shape[0]) and (0 <= y < env.shape[1]) \
+                and (env[x, y] == 0) and (x, y) not in died:
+            candidates.append((x, y))
+    return candidates
+
+
+def random_cont(env, crd=None, lin=None, died=None):
+    pos_crds, imp_crds = get_crds(env)
+    if crd is None:
+        crd = random.sample(pos_crds, 1)[0]
+    elif crd in imp_crds:
+        crd = random.sample(get_candidates(env, crd, died), 1)[0]
+
+    if np.random.random() < .5:
+        ways = [(0, 1), (0, -1)] if lin else None
+    else:
+        ways = [(1, 0), (-1, 0)] if lin else None
+
+    if died is None:
+        died_crds = [crd]
+    else:
+        died_crds = died + [crd]
+
+    while len(died_crds) < len(pos_crds):
+        candidates = get_candidates(env, crd, ways, died_crds)
+        while len(candidates) > 0:
+            crd = random.sample(candidates, 1)[0]
+            died_crds.append(crd)
+            candidates = get_candidates(env, crd, ways, died_crds)
+
+        if len(died_crds) == len(pos_crds):
+            break
+        remains = list(set(pos_crds) - set(died_crds))
+        remains_distance = [get_distance(crd, rem) for rem in remains]
+        crd = remains[np.argmin(remains_distance)]
+        died_crds.append(crd)
+    return died_crds
+
+
 class InitRoute:
-    def __init__(self, env, n_routes=None):
+    def __init__(self, env, n_routes="auto"):
         self.env = env
-        self.pos_crds, self.imp_crds = self.get_crds()
+        self.pos_crds, self.imp_crds = get_crds(env)
 
-        if n_routes is not None:
+        if n_routes == "auto":
             lin_routes = self.lin_generation()
-            routes = self.random_cont_generation(n_routes - len(lin_routes))
-            self.routes = lin_routes + routes
-
-    def get_crds(self):
-        pos_crds, imp_crds = [], []
-        for i in range(len(self.env)):
-            for j in range(len(self.env[0])):
-                if self.env[i, j] == 0:
-                    pos_crds.append((i, j))
-                else:
-                    imp_crds.append((i, j))
-        return pos_crds, imp_crds
+            cont_routes = []
+            for crd in self.pos_crds:
+                route = self.random_cont_generation(5, crd, True)
+                cont_routes.extend(route)
+            # cont_routes = self.random_cont_generation(n_routes - len(lin_routes))
+            self.routes = lin_routes + cont_routes
+            print(f"Use {len(self.routes)} routes")
 
     def random_generation(self, n_routes):
         routes = []
@@ -70,52 +124,12 @@ class InitRoute:
         routes = [self.remove_crds(r) for r in routes]
         return routes
 
-    def get_candidates(self, crd, ways=None, died=None):
-        if ways is None:
-            ways = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
-        if died is None:
-            died = []
-
-        candidates = []
-        for i, j in ways:
-            x, y = crd[0]+i, crd[1]+j
-            if (0 <= x < self.env.shape[0]) and (0 <= y < self.env.shape[1]) \
-                    and (self.env[x, y] == 0) and (x, y) not in died:
-                candidates.append((x, y))
-        return candidates
-
-    def random_cont(self, crd=None, lin=None):
-        if crd is None:
-            crd = random.sample(self.pos_crds, 1)[0]
-        elif crd in self.imp_crds:
-            crd = random.sample(self.get_candidates(crd), 1)[0]
-
-        if np.random.random() < .5:
-            ways = [(0, 1), (0, -1)] if lin else None
-        else:
-            ways = [(1, 0), (-1, 0)] if lin else None
-
-        died_crds = [crd]
-        while len(died_crds) < len(self.pos_crds):
-            candidates = self.get_candidates(crd, ways, died_crds)
-            while len(candidates) > 0:
-                crd = random.sample(candidates, 1)[0]
-                died_crds.append(crd)
-                candidates = self.get_candidates(crd, ways, died_crds)
-
-            if len(died_crds) == len(self.pos_crds):
-                break
-            remains = list(set(self.pos_crds) - set(died_crds))
-            remains_distance = [get_distance(crd, rem) for rem in remains]
-            crd = remains[np.argmin(remains_distance)]
-            died_crds.append(crd)
-        return died_crds
-
-    def random_cont_generation(self, n_routes):
+    def random_cont_generation(self, n_routes, crd=None, lin=None):
         routes = []
         for _ in range(n_routes):
-            lin = True if np.random.random() < .5 else None
-            routes.append(self.random_cont(None, lin))
+            if lin is None:
+                lin = True if np.random.random() < .5 else None
+            routes.append(random_cont(self.env, crd, lin))
         return routes
 
     @staticmethod

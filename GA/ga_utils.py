@@ -1,7 +1,7 @@
 import random
 import numpy as np
 from operator import itemgetter
-from initializer import get_distance
+from initializer import get_distance, random_cont
 
 
 def calc_distance_sum(route):
@@ -28,7 +28,7 @@ def get_cix(route):
     return cix
 
 
-def breed(pra, prb, cix_ratio=.0):
+def breed(pra, prb, cix_ratio=.8):
     cra, crb = [], []
     if np.random.random() < cix_ratio:
         cix = get_cix(pra)
@@ -45,6 +45,20 @@ def breed(pra, prb, cix_ratio=.0):
 
     crb = [i for i in prb if i not in cra]
     return cra + crb
+
+
+def regeneration(env, route):
+    cix = get_cix(route)
+    if len(cix) < 1:
+        return route
+    elif len(cix) == 1:
+        regen_idx = random.sample(range(0, cix[0]-1), 1)[0]
+        route = random_cont(env, route[regen_idx], True, died=route[:regen_idx])
+    else:
+        _begin = 0 if len(cix) == 2 else cix[-3]-1
+        regen_idx = random.sample(range(_begin, cix[-2]-1), 1)[0]
+        route = random_cont(env, route[regen_idx], True, died=route[:regen_idx])
+    return route
 
 
 def mutate(route):
